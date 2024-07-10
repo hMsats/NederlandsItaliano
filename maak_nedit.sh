@@ -1,4 +1,4 @@
-cd /var/www/html/nic
+cd /var/www/html/NederlandsItaliaans
 
 \cp -f index.html index_bew.html
 
