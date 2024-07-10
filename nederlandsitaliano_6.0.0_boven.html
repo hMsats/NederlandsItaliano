@@ -1,0 +1,2475 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Nederlands-Italiaans voor Zelfstudie!" content="Nederlands-Italiaans voor Zelfstudie!">
+    <meta name="keywords" content="Nederlands, Italiaans, Leren, Studeren">
+
+    <!-- 2 regels voor full screen als je opstart 
+         via link op startscherm -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#666666">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#666666">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#666666">
+
+<title>Nederlands-Italiaans voor Zelfstudie!</title>
+</head>
+
+<body>
+
+<style>
+input[type="button"]
+{
+    font-size:9px;
+}
+body {
+  margin-top: 12px;
+  zoom: 196%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+div.voorbeelden_div {
+  max-height: 999999px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+}
+div.label_div {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+}
+</style>
+
+<div class="inibutton" id=initialisatie_button>
+<p>
+Het programma wordt geladen ...
+</p>
+</div>
+
+<input style="height: 25px; width: 35px; display: none" id=tekst_groter_button onmousedown=tekst_groter(); value="T+" type=button></input> 
+<input style="height: 25px; width: 35px; display: none" id=tekst_kleiner_button onmousedown=tekst_kleiner(); value="T-" type=button></input> 
+<input style="height: 25px; width: 35px; display: none" id=label_groter_button onmousedown=label_groter(); value="L+" type=button></input> 
+<input style="height: 25px; width: 35px; display: none" id=label_kleiner_button onmousedown=label_kleiner(); value="L-" type=button></input> 
+<input style="height: 25px; width: 35px; display: none" id=info_groter_button onmousedown=info_groter(); value="I+" type=button></input> 
+<input style="height: 25px; width: 35px; display: none" id=info_kleiner_button onmousedown=info_kleiner(); value="I-" type=button></input> 
+
+<p style="MARGIN: 0px"></p>
+
+<input style="height: 25px; width: 95px; display: none" id=info_weg_button onmousedown=info_weg(); value="Terug" type=button></input> 
+<input style="height: 25px; width: 95px; display: none" id=slot_button onmousedown=tokkel_slot(); value="Slot aan" type=button></input> 
+<input style="height: 25px; width: 65px; display: none" id=herstel_button onmousedown=herstel(); value="Herstel" type=button></input> 
+&nbsp;
+
+<input style="height: 45px; width: 146px;" id=volgende_button_2 onmousedown=volgend_item(); value="Volgende" type=button></input> 
+
+<input style="height: 25px; width: 40px; display: none" id=mix_button onmousedown=tokkel_rand_array(); value="Mix" type=button></input> 
+<input style="height: 25px; width: 40px; display: none" id=niveau_button onmousedown=niveau(); value="P1A" type=button></input> 
+<input style="height: 25px; width: 60px; display: none" id=info_button onmousedown=tokkel_info(); value="Info" type=button></input> 
+<input style="height: 45px; width: 146px; display: none" id=volgende_button onmousedown=volgend_item(); value="Volgende" type=button></input> 
+
+<p style="MARGIN: 0px"></p>
+
+&nbsp;
+<input style="height: 25px; width: 96px;" id=terug_button onmousedown=terug(); value="Terug" type=button></input> 
+<input style="height: 25px; width: 60px; display: none" id=sla_op_of_verwijder_item_button onmousedown=sla_op_of_verwijder_item(); value="Sla op" type=button></input> 
+<input style="height: 25px; width: 70px; display: none" id=mode_button onmousedown=tokkel_mode(); value="Herhaal" type=button></input> 
+<input style="height: 25px; width: 55px; display: none" id=zoek_button onmousedown=zoeken(); value="Zoek" type=button></input> 
+<input style="height: 25px; width: 50px; display: none" id=kleur_button onmousedown=kleur(); value="Kleur" type=button></input> 
+<input style="height: 25px; width: 96px;" id=terug_button_2 onmousedown=terug(); value="Terug" type=button></input> 
+
+<p style="MARGIN: 0px"></p>
+
+<input style="height: 25px; width: 250px; display: none" id=gebruiker_button onmousedown=knoppen_uit(); onchange=gebruiker_instellen();></input> 
+
+<input style="height: 25px; width: 80px; display: none" id=volgende_zoeken_button onmousedown=volgende_zoeken(); value="Zoek" type=button></input> 
+<input style="height: 25px; width: 180px; display: none" id=zoekwoord_button onmousedown=knoppen_uit(); onchange=zoekwoord_instellen(); onkeypress=onEnter(event);></input> 
+<input style="height: 25px; width: 80px; display: none" id=wissen_button onmousedown=wissen(); value="Wissen" type=button></input> 
+<input style="height: 25px; width: 75px; display: none" id=stop_zoeken_button onmousedown=stop_zoeken(); value="Einde" type=button></input> 
+<input style="height: 25px; width: 80px; display: none" id=wissen_button2 onmousedown=wissen(); value="Wissen" type=button></input> 
+<input style="height: 25px; width: 80px; display: none" id=wissen2_button onmousedown=wissen2(); value="Wissen" type=button></input> 
+<input style="height: 25px; width: 120px; display: none" id=opnieuw_zoeken_button onmousedown=opnieuw_zoeken(); value="Opnieuw zoeken" type=button></input> 
+
+<p class="m10"></p>
+
+<div class="voorbeelden_div" id="voorbeelden_div"></div>
+<div class="label_div" id="label_div"></div>
+
+<script language=javascript>
+
+document.onkeydown=toets_ingedrukt;
+document.onkeyup=toets_losgelaten;
+
+// Globale systeem variabelen.
+var nederlandsitaliano_versie='1.0.0';
+var cookie_versie='1';
+var data_versie='1';
+var datum_versie='10-11-2011';
+
+var maximum_moeilijkheidsgraad=15;
+var maximaal_aantal_te_leren_items=500;
+var aantal_kleuren=6;
+
+// Globale variabelen.
+// Deze worden geinitialiseerd in:
+// initialiseer_parameters()
+var moeilijkheidsgraad;
+var tekst_grootte;
+var label_grootte;
+var info_grootte;
+var aantal_voorbeelden;
+var aantal_voorbeelden1A;
+var aantal_voorbeelden1B;
+var aantal_voorbeelden1C;
+var aantal_voorbeelden1D;
+var aantal_voorbeelden1E;
+var aantal_voorbeelden1F;
+var aantal_voorbeelden1G;
+var aantal_voorbeelden1H;
+var aantal_voorbeelden1I;
+var aantal_voorbeelden1J;
+var aantal_voorbeelden1K;
+var aantal_voorbeelden1;
+var aantal_voorbeelden2;
+var aantal_voorbeelden3;
+var aantal_voorbeelden4;
+var eerste_keer_x;
+var eerste_keer_uit;
+var een_controle_toets_is_ingedrukt;
+var knoppen;
+var slot_is_aan;
+var string;
+var buttons_zijn_zichtbaar;
+var aanmelden_bekijk;
+var niveau_bekijk;
+var zoeken_bekijk;
+var label;
+var item_zoek;
+var n_zoek;
+var aan_het_zoeken;
+var parameters_veranderd_voor_het_zoeken;
+var italiaans_nederlands;
+var zichtbaar;
+var in_info;
+var label_is_zichtbaar;
+var n;
+var m;
+var seed_bekijk;
+var zoekwoord_string;
+var zoekwoord_string_oud;
+var num_string;
+var cookie_naam0;
+var cookie_naam1;
+var cookie_naam2;
+var item_bekijk;
+var item_herhaal;
+var taal_bekijk;
+var taal_herhaal;
+var pos_bekijk;
+var nieuwe_correcte_waarde;
+var pos_herhaal;
+var aantal_items_herhaal;
+var aantal_items_bekijk;
+var max_aantal_items_bekijk;
+var kleur_nummer;
+var onder_item;
+var boven_item;
+var mode;
+var sub_pagina;
+var huidige_sub_pagina;
+var aantal_sub_paginaas;
+var huidige_sub_pagina_bekijk;
+var aantal_sub_paginaas_bekijk;
+var huidige_sub_pagina_herhaal;
+var aantal_sub_paginaas_herhaal;
+var sub_pagina_bekijk;
+var sub_pagina_herhaal;
+var gebruiker_string;
+var niets_meer_gevonden;
+
+var aux_pos=new Array();
+var textinfo=new Array();
+var tekst_voorbeelden=new Array();
+var rand_pos_bekijk=new Array();
+var rand_pos_herhaal=new Array();
+var data=new Array();
+var positie=new Array();
+var zoekdata=new Array();
+var zoek_bew_rand_pos_bekijk=new Array();
+
+function initialiseer_parameters()
+{
+  moeilijkheidsgraad=1;
+
+  tekst_grootte=2;
+  label_grootte='1';
+  info_grootte='12';
+
+  aantal_voorbeelden=0;
+  aantal_voorbeelden1A=0;
+  aantal_voorbeelden1B=0;
+  aantal_voorbeelden1C=0;
+  aantal_voorbeelden1D=0;
+  aantal_voorbeelden1E=0;
+  aantal_voorbeelden1F=0;
+  aantal_voorbeelden1G=0;
+  aantal_voorbeelden1H=0;
+  aantal_voorbeelden1I=0;
+  aantal_voorbeelden1J=0;
+  aantal_voorbeelden1K=0;
+  aantal_voorbeelden1=0;
+  aantal_voorbeelden2=0;
+  aantal_voorbeelden3=0;
+  aantal_voorbeelden4=0;
+
+  eerste_keer_x=1;
+  eerste_keer_uit=1;
+  een_controle_toets_is_ingedrukt=0;
+  knoppen=1;
+  in_info=-1;
+  slot_is_aan=1;
+  string='';
+  buttons_zijn_zichtbaar=1;
+  aanmelden_bekijk=-1;
+  niveau_bekijk=-1;
+  zoeken_bekijk=-1;
+  item_zoek=0;
+  n_zoek=0;
+  aan_het_zoeken=-1;
+  parameters_veranderd_voor_het_zoeken=-1;
+  italiaans_nederlands=-1;
+  zichtbaar=1;
+  label_is_zichtbaar=1;
+  seed_bekijk=51084;
+  zoekwoord_string='';
+  zoekwoord_string_oud="scriptx";
+
+  cookie_naam0='nederlandsitaliano_0_' + nederlandsitaliano_versie + '_' + cookie_versie + '_' + data_versie + '_' + gebruiker_string;
+  cookie_naam1='nederlandsitaliano_1_' + nederlandsitaliano_versie + '_' + cookie_versie + '_' + data_versie + '_' + gebruiker_string;
+  cookie_naam2='nederlandsitaliano_2_' + nederlandsitaliano_versie + '_' + cookie_versie + '_' + data_versie + '_' + gebruiker_string;
+
+  item_bekijk=0;
+  item_herhaal=0;
+  taal_bekijk=1;
+  taal_herhaal=1;
+  nieuwe_correcte_waarde=0;
+  pos_herhaal=1;
+  aantal_items_herhaal=0;
+  aantal_items_bekijk=0;
+  max_aantal_items_bekijk=0;
+  kleur_nummer=3;
+  onder_item=0;
+  boven_item=0;
+  mode=0;
+  sub_pagina=1;
+  huidige_sub_pagina=1;
+  aantal_sub_paginaas=1;
+  huidige_sub_pagina_bekijk=1;
+  aantal_sub_paginaas_bekijk=1;
+  huidige_sub_pagina_herhaal=1;
+  aantal_sub_paginaas_herhaal=1;
+  sub_pagina_bekijk=1;
+  sub_pagina_herhaal=1;
+  niets_meer_gevonden=-1;
+}
+
+function createCookie(name,value,days) 
+{
+  if (days)
+  {
+    var date=new Date();
+    date.setTime(date.getTime()+(days*24*60*60*1000));
+  }
+}
+
+function createCookie(name,value,days) 
+{
+  if (days)
+  {
+    var date=new Date();
+    date.setTime(date.getTime()+(days*24*60*60*1000));
+    var expires="; expires="+date.toGMTString();
+  }
+  else 
+    var expires="";
+
+  document.cookie=name+"="+value+expires+";path=/";
+}
+
+function readCookie(name)
+{
+  var nameEQ=name + "=";
+  var ca=document.cookie.split(';');
+  for(var i=0;i< ca.length;i++)
+  {
+    var c=ca[i];
+
+    while (c.charAt(0)==' ')
+      c=c.substring(1,c.length);
+    
+    if (c.indexOf(nameEQ)==0) 
+      return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}
+
+function eraseCookie(name)
+{
+  createCookie(name,"",-1);
+}
+
+// Dit is handig om toetscodes te achterhalen.
+//<input size="40" value="Type hier een toets!" onkeydown="GetChar (event);"/>
+//function GetChar (event)
+//{
+//  var toets_code=event.which;
+//  if (toets_code==undefined)
+//  {
+//    toets_code=event.keyCode;
+//  }
+//  alert ("De toetscode is: " + toets_code);
+//}
+
+function toets_losgelaten(e)
+{
+  var toets_nummber=(window.event) ? event.keyCode : e.keyCode;
+
+  switch(toets_nummber)
+  {
+    case 17: // Ctrl
+    case 18: // Alt
+    case 224: // cmd op de macbook volgens Firefox
+    case 91: // cmd op de macbook volgens Safari
+      een_controle_toets_is_ingedrukt=0;
+    break;
+  }
+}
+
+function toets_ingedrukt(e)
+{
+  if (knoppen==0) return;
+
+  if (een_controle_toets_is_ingedrukt==1) 
+  {
+    een_controle_toets_is_ingedrukt=0;
+    return;
+  }
+
+  var toets_nummber=(window.event) ? event.keyCode : e.keyCode;
+
+  switch(toets_nummber)
+  {
+    case 17: // Ctrl
+    case 18: // Alt
+    case 224: // cmd op de macbook volgens Firefox
+    case 91: // cmd op de macbook volgens Safari
+      een_controle_toets_is_ingedrukt=1;
+    break;
+    case 32: // Space
+    case 68: // D(oor)
+    case 86: // V(olgende)
+    case 39: // Pijltje naar rechts
+    case 13: // Enter
+      if (niets_meer_gevonden==1) break;
+      if (zichtbaar==1 && in_info==-1)
+        volgend_item();
+      break; 
+    case 83: //S(electeer)
+      if (niets_meer_gevonden==1) break;
+      if (zichtbaar==1 && in_info==-1)
+        sla_op();
+      if (zichtbaar==1 && in_info==1)
+        tokkel_slot()
+      break; 
+    case 76: //L(abel)
+      if (niets_meer_gevonden==1) break;
+      if (zichtbaar==1 && in_info==-1)
+        tokkel_label();
+      break;
+    case 77: //M(ix)
+      if (niets_meer_gevonden==1) break;
+      if (zichtbaar==1 && in_info==-1)
+        tokkel_rand_array();
+      break;
+    case 65: //A(anmelden)
+      if (niets_meer_gevonden==1) break;
+      if (zichtbaar==1 && in_info==-1)
+        aanmelden();
+      break;
+    case 87: // W(eg) of W(issen)
+      if (zoeken_bekijk==1 || aan_het_zoeken==1) 
+      {
+        if (niets_meer_gevonden==1)
+          wissen2();
+        else
+          wissen();
+      }
+      else
+      {
+        if (zichtbaar==1 && in_info==-1)
+          verwijder_item();
+      }
+      break; 
+    case 27: // Esc. 
+      if (niets_meer_gevonden==1) 
+        stop_zoeken();
+      if (zichtbaar==-1) 
+        uit();
+      if (zichtbaar==1 && in_info==1)
+        info_weg();
+      if (zichtbaar==1 && in_info==-1 && buttons_zijn_zichtbaar==-1)
+      {
+        tokkel_buttons();
+        tekst_afbeelden();
+      }
+      break; 
+    case 69: // E(inde zoeken)
+      if (zoeken_bekijk==1 || aan_het_zoeken==1) 
+        stop_zoeken();
+      break; 
+    case 73: // I(nfo)
+      if (niets_meer_gevonden==1) break;
+      if (zichtbaar==1)
+        tokkel_info();
+      break; 
+    case 66: //B(ekijk)
+      if (niets_meer_gevonden==1) break;
+      if (mode==1)
+      {
+        if (zichtbaar==1 && in_info==-1)
+          tokkel_mode();
+        if (zichtbaar==1 && in_info==1)
+          herstel();
+      }
+      break; 
+    case 72: // H(erhaal)
+      if (niets_meer_gevonden==1) break;
+      if (mode==0)
+      {
+        if (zichtbaar==1 && in_info==-1)
+          tokkel_mode();
+        if (zichtbaar==1 && in_info==1)
+          herstel();
+      }
+      break; 
+    case 84: // T(erug)
+      if (niets_meer_gevonden==1) break;
+      if (zichtbaar==1 && in_info==-1)
+        terug();
+      if (zichtbaar==1 && in_info==1)
+        info_weg();
+      break; 
+    case 37: // Pijltje naar links
+    case 70: // f(oorgaande)
+    case 8:  // backspace
+      if (niets_meer_gevonden==1) break;
+      if (zichtbaar==1 && in_info==-1)
+        terug();
+      break; 
+    case 75: // k(leur)
+      if (zichtbaar==1)
+        kleur();
+      break; 
+    case 78: // N(E <-> IT)
+      if (niets_meer_gevonden==1) break;
+      if (zichtbaar==1 && in_info==-1)
+        tokkel_italiaans_naar_nederlands();
+      break; 
+    case 79: // O(pnieuw zoeken)
+      if (zoeken_bekijk==1 || aan_het_zoeken==1) 
+        opnieuw_zoeken();
+      break; 
+    case 80: // P1, P2, P3, P4
+      if (niets_meer_gevonden==1) break;
+      if (zichtbaar==1 && in_info==-1)
+        niveau();
+      break; 
+    case 85: // U(it)
+        uit();
+      break; 
+    case 88: // x
+      if (niets_meer_gevonden==1) break;
+      if (zichtbaar==1 && in_info==-1)
+      {
+        tokkel_buttons();
+        tekst_afbeelden();
+      }
+      break; 
+    case 90: // z(oeken && in_info==-1)
+
+      if (zoeken_bekijk==1 || aan_het_zoeken==1) 
+      {
+        if (niets_meer_gevonden==1)
+        {
+           opnieuw_zoeken();
+        }
+        volgende_zoeken();
+      }
+      else
+      {
+        if (in_info -1 && zichtbaar==1)
+          zoeken();
+      }
+      break; 
+  }
+}
+
+function knoppen_uit()
+{
+  knoppen=0;
+}
+
+function label_van_het_scherm()
+{
+  return;
+}
+
+function tokkel_label()
+{
+  if (zoeken_bekijk==1 || aan_het_zoeken==1) stop_zoeken();
+
+  label_is_zichtbaar=-label_is_zichtbaar;
+  tekst_afbeelden();
+}
+
+function herstel()
+{
+  var wat;
+
+  wat=confirm("EEN TOTAAL HERSTEL NAAR DE ORIGINELE PARAMETERS?\n\nAlle geselecteerde voorbeelden zullen niet meer beschikbaar zijn!\nAls de gebruiker is aangemeld, zal de gebruiker worden afgemeld.");
+
+  if (wat==1)
+  {
+    info_weg();
+
+    eraseCookie(cookie_naam0);
+    eraseCookie(cookie_naam1);
+    eraseCookie(cookie_naam2);
+
+    gebruiker_string='';
+    initialisatie();
+    document.getElementById("gebruiker_button").value=gebruiker_string;
+  }
+}
+
+function tokkel_buttons()
+{
+  var wat=1;
+
+  if (zoeken_bekijk==1 || aan_het_zoeken==1) stop_zoeken();
+
+  if (eerste_keer_x==1 && buttons_zijn_zichtbaar==1)
+  {
+    wat=confirm("DEZE OPTIE LAAT DE KNOPPEN VERDWIJNEN.\n\nDe knoppen worden weer zichtbaar door de\nx-toets (of Esc-toets) in te drukken.\nDeze mededeling keert deze sessie niet\nmeer terug");
+    if (wat==1)
+      eerste_keer_x=0;
+  }
+
+  if (wat==1)
+  {
+    buttons_zijn_zichtbaar=-buttons_zijn_zichtbaar;
+
+    if (buttons_zijn_zichtbaar==-1)
+      buttons_weg();
+    else
+      buttons_afbeelden();
+  }
+}
+
+function buttons_weg()
+{
+
+  if (mode==0)
+  {
+    document.getElementById('volgende_button').style.display='none';
+    document.getElementById('volgende_button_2').style.display='none';
+    document.getElementById('terug_button').style.display='none';
+    document.getElementById('terug_button_2').style.display='none';
+    document.getElementById('sla_op_of_verwijder_item_button').style.display='none';
+    document.getElementById('mode_button').style.display='none';
+    document.getElementById('mix_button').style.display='none';
+    document.getElementById('kleur_button').style.display='none';
+    document.getElementById('info_button').style.display='none';
+    document.getElementById('niveau_button').style.display='none';
+    document.getElementById('zoek_button').style.display='none';
+  }
+  else
+  {
+    document.getElementById('volgende_button').style.display='none';
+    document.getElementById('volgende_button_2').style.display='none';
+    document.getElementById('terug_button').style.display='none';
+    document.getElementById('terug_button_2').style.display='none';
+    document.getElementById('sla_op_of_verwijder_item_button').style.display='none';
+    document.getElementById('mode_button').style.display='none';
+    document.getElementById('mix_button').style.display='none';
+    document.getElementById('kleur_button').style.display='none';
+    document.getElementById('info_button').style.display='none';
+    document.getElementById('niveau_button').style.display='none';
+    document.getElementById('zoek_button').style.display='none';
+  }
+}
+
+function buttons_afbeelden()
+{
+  if (mode==0)
+  {
+    document.getElementById("mode_button").value="Herhaal";
+    document.getElementById("sla_op_of_verwijder_item_button").value="Sla op";
+
+    document.getElementById('volgende_button').style.display='inline';
+    document.getElementById('volgende_button_2').style.display='inline';
+    document.getElementById('terug_button').style.display='inline';
+    document.getElementById('terug_button_2').style.display='inline';
+    document.getElementById('sla_op_of_verwijder_item_button').style.display='inline';
+    document.getElementById('mode_button').style.display='inline';
+    document.getElementById('mix_button').style.display='inline';
+    document.getElementById('kleur_button').style.display='inline';
+    document.getElementById('info_button').style.display='inline';
+    document.getElementById('niveau_button').style.display='inline';
+    document.getElementById('zoek_button').style.display='inline';
+  }
+  else
+  {
+    document.getElementById("mode_button").value="Bekijken";
+    document.getElementById("sla_op_of_verwijder_item_button").value="Weg";
+
+    document.getElementById('volgende_button').style.display='inline';
+    document.getElementById('volgende_button_2').style.display='inline';
+    document.getElementById('terug_button').style.display='inline';
+    document.getElementById('terug_button_2').style.display='inline';
+    document.getElementById('sla_op_of_verwijder_item_button').style.display='inline';
+    document.getElementById('mode_button').style.display='inline';
+    document.getElementById('mix_button').style.display='inline';
+    document.getElementById('kleur_button').style.display='inline';
+    document.getElementById('info_button').style.display='inline';
+    document.getElementById('niveau_button').style.display='inline';
+    document.getElementById('zoek_button').style.display='inline';
+  }
+}
+
+function kleur()
+{
+  kleur_nummer++;
+  if (kleur_nummer>aantal_kleuren)
+    kleur_nummer=1;
+
+  herkleur();
+
+  sla_parameters_op();
+}
+
+function herkleur()
+{
+  //document.body.background='';
+
+  if (kleur_nummer==1)
+    document.bgColor="#FFFFFF";
+  else if (kleur_nummer==2)
+    document.bgColor="#EEEEEE"; // Grey. 
+  else if (kleur_nummer==3)
+    document.bgColor="#DDDDDD"; // Grey. 
+  else if (kleur_nummer==4)
+    document.bgColor="#CCCCCC"; // Grey. 
+  else if (kleur_nummer==5)
+    document.bgColor="#BBBBBB"; // Grey. 
+  else if (kleur_nummer==6)
+    document.bgColor="#AAAAAA"; // Grey. 
+}
+
+function sla_op_of_verwijder_item()
+{
+  if (mode==0)
+    sla_op();
+  else
+    verwijder_item();
+}
+
+function tokkel_mode()
+{
+  if (zoeken_bekijk==1 || aan_het_zoeken==1) stop_zoeken();
+
+  if (mode==0)
+  {
+    if (aantal_items_herhaal!=0)
+      mode=1;
+    else
+      alert("Er zijn geen voorbeelden geselecteerd.\nHet is dus niet mogelijk om voorbeelden te herhalen!");
+  }
+  else
+    mode=0;
+
+  if (mode==0)
+  {
+    huidige_sub_pagina=huidige_sub_pagina_bekijk;
+    aantal_sub_paginaas=aantal_sub_paginaas_bekijk;
+  }
+  else
+  {
+    huidige_sub_pagina=huidige_sub_pagina_herhaal;
+    aantal_sub_paginaas=aantal_sub_paginaas_herhaal;
+  }
+
+  if (buttons_zijn_zichtbaar==1)
+    buttons_afbeelden();
+  tekst_afbeelden();
+}
+
+function volgend_item()
+{
+  var resultaat=1;
+
+  bepaal_aantal_sub_paginaas();
+
+  if (aantal_sub_paginaas==1)
+  {
+    huidige_sub_pagina=1;
+    if (mode==0)
+    {
+      taal_bekijk=-taal_bekijk;
+      if (taal_bekijk==1)
+      {
+        if (zoeken_bekijk==1 || aan_het_zoeken==1); 
+        else
+          item_bekijk++;
+        if (item_bekijk>aantal_items_bekijk-1)
+          item_bekijk=0;
+      }
+    }
+    else
+    {
+      taal_herhaal=-taal_herhaal;
+      if (taal_herhaal==1)
+      {
+        if (zoeken_bekijk==1 || aan_het_zoeken==1); 
+        else
+          item_herhaal++;
+        if (item_herhaal>aantal_items_herhaal-1)
+          item_herhaal=0;
+      }
+    }
+  }
+  else
+  {
+    if (mode==0)
+    {
+      if (taal_bekijk==1)
+      {
+         taal_bekijk=-taal_bekijk;
+         huidige_sub_pagina=1;
+      }
+      else
+      {
+        huidige_sub_pagina++;
+
+        if (huidige_sub_pagina>aantal_sub_paginaas)
+        {
+          huidige_sub_pagina=1;
+          taal_bekijk=-taal_bekijk;
+          if (zoeken_bekijk==1 || aan_het_zoeken==1); 
+          else
+            item_bekijk++;
+          if (item_bekijk>aantal_items_bekijk-1)
+            item_bekijk=0;
+        }
+      }
+    }
+    else
+    {
+      if (taal_herhaal==1)
+      {
+         taal_herhaal=-taal_herhaal;
+         huidige_sub_pagina=1;
+      }
+      else
+      {
+        huidige_sub_pagina++;
+
+        if (huidige_sub_pagina>aantal_sub_paginaas)
+        {
+          huidige_sub_pagina=1;
+          taal_herhaal=-taal_herhaal;
+          if (zoeken_bekijk==1 || aan_het_zoeken==1); 
+          else
+            item_herhaal++;
+          if (item_herhaal>aantal_items_herhaal-1)
+            item_herhaal=0;
+        }
+      }
+    }
+  }
+  if (mode==0)
+  {
+    huidige_sub_pagina_bekijk=huidige_sub_pagina;
+    aantal_sub_paginaas_bekijk=aantal_sub_paginaas;
+  }
+  else
+  {
+    huidige_sub_pagina_herhaal=huidige_sub_pagina;
+    aantal_sub_paginaas_herhaal=aantal_sub_paginaas;
+  }
+  tekst_afbeelden();
+}
+
+function terug()
+{
+  if (mode==0)
+  {
+    if (taal_bekijk==1)
+    {
+      if (item_bekijk==0)
+        item_bekijk=aantal_items_bekijk-1;
+      else
+        if (zoeken_bekijk==1 || aan_het_zoeken==1); 
+        else
+          item_bekijk--;
+      bepaal_aantal_sub_paginaas();
+      huidige_sub_pagina=aantal_sub_paginaas;
+      taal_bekijk=-1;
+    }
+    else
+    {
+      bepaal_aantal_sub_paginaas();
+      if (huidige_sub_pagina==1)
+        taal_bekijk=-taal_bekijk;
+      else 
+        huidige_sub_pagina--;
+    }
+  }
+  else
+  {
+    if (taal_herhaal==1)
+    {
+      if (item_herhaal==0)
+        item_herhaal=aantal_items_herhaal-1;
+      else
+        if (zoeken_bekijk==1 || aan_het_zoeken==1); 
+        else
+          item_herhaal--;
+
+      bepaal_aantal_sub_paginaas();
+      huidige_sub_pagina=aantal_sub_paginaas;
+      taal_herhaal=-1;
+    }
+    else
+    {
+      bepaal_aantal_sub_paginaas();
+      if (huidige_sub_pagina==1)
+        taal_herhaal=-taal_herhaal;
+      else
+        huidige_sub_pagina--;
+    }
+
+  }
+  if (mode==0)
+  {
+    huidige_sub_pagina_bekijk=huidige_sub_pagina;
+    aantal_sub_paginaas_bekijk=aantal_sub_paginaas;
+  }
+  else
+  {
+    huidige_sub_pagina_herhaal=huidige_sub_pagina;
+    aantal_sub_paginaas_herhaal=aantal_sub_paginaas;
+  }
+  tekst_afbeelden();
+}
+
+function rd(X)
+{
+var A=134775813;
+var C=1 ; 
+var M=232
+
+X=((X * A) + C);
+X=X % M ;
+
+X=X/M;
+
+return(X);
+}
+
+function rand_array_weer_bekijk()
+{
+  var s;
+  var random_number;
+
+  m=-1;
+  for (n=0;n<aantal_items_bekijk;n++)
+  {
+    m++;
+    rand_pos_bekijk[m]=n;
+    aux_pos[m]=n;
+  }
+
+  ran=seed_bekijk;
+  m=-1;
+  for (n=0;n<aantal_items_bekijk;n++)
+  {
+    s=aantal_items_bekijk-n;
+    ran=rd(ran);
+    random_number=Math.floor(ran*s);
+    rand_pos_bekijk[++m]=aux_pos[random_number];
+    aux_pos[random_number]=aux_pos[s-1];
+  }
+}
+
+function rand_array_bekijk()
+{
+  var s;
+  var random_number;
+
+  m=-1;
+  for (n=0;n<aantal_items_bekijk;n++)
+  {
+    m++;
+    rand_pos_bekijk[m]=n;
+    aux_pos[m]=n;
+  }
+
+  ran=Math.random();
+  seed_bekijk=1+Math.floor(ran*(100000-1));
+  ran=seed_bekijk;
+  m=-1;
+  for (n=0;n<aantal_items_bekijk;n++)
+  {
+    s=aantal_items_bekijk-n;
+    ran=rd(ran);
+    random_number=Math.floor(ran*s);
+    rand_pos_bekijk[++m]=aux_pos[random_number];
+    aux_pos[random_number]=aux_pos[s-1];
+  }
+}
+
+function sla_op()
+{
+  if (mode==1)
+    return;
+
+  if (aantal_items_herhaal>=maximaal_aantal_te_leren_items)
+  {
+    window.alert('MAXIMAAL AANTAL TE SELECTEREN WOORDEN EN ZINNEN BEREIKT!\n(Meer kan er (waarschijnlijk) niet worden weggeschreven in een cookie)');
+    return;
+  }
+
+  for (n=0;n<aantal_items_herhaal;n++)
+  {
+    if (positie[rand_pos_herhaal[n]]==rand_pos_bekijk[item_bekijk])
+     return;
+  }
+
+  rand_pos_herhaal[aantal_items_herhaal]=parseInt(data[rand_pos_bekijk[item_bekijk]][2]);
+
+  aantal_items_herhaal++;
+
+  sla_parameters_op();
+  sla_data_op();
+
+  tekst_afbeelden();
+}
+
+function tekst_afbeelden()
+{
+  var vol1;
+  var vol2;
+  var item_af;
+  var temp=new Array();
+  var slot_woord=-1;
+
+  if (mode==0)
+  {
+    taal=taal_bekijk;
+    pos=rand_pos_bekijk[item_bekijk];
+    item_af=item_bekijk+1;
+
+    if (label_is_zichtbaar==1)
+      if (taal_bekijk==1)
+        label='V' + item_af + '/' + aantal_items_bekijk + '-' + aantal_items_herhaal;
+      else
+        label='A' + item_af + '/' + aantal_items_bekijk + '-' + aantal_items_herhaal;
+    else
+      label='';
+  }
+  else
+  {
+    if (aantal_items_herhaal==0)
+      return;
+ 
+    taal=taal_herhaal;
+    pos=positie[Math.abs(rand_pos_herhaal[item_herhaal])];
+
+    item_af=item_herhaal+1;
+
+    if (label_is_zichtbaar==1)
+      if (taal_herhaal==1)
+        label='V' + item_af + '/' + aantal_items_herhaal;
+      else
+        label='A' + item_af + '/' + aantal_items_herhaal;
+    else
+     label='';
+  }
+
+  if (italiaans_nederlands==-1)
+  {
+    vol1=0;
+    vol2=1;
+  }
+  else
+  {
+    vol1=1;
+    vol2=0;
+  }
+
+  if (taal==1)
+  {
+    if (italiaans_nederlands==-1)
+    {
+      if (pos==0.5)
+        tekst_voorbeelden="[verwijderd]";
+      else
+        tekst_voorbeelden=data[pos][vol1];
+    }
+    else
+    {
+      if (pos==0.5)
+        tekst_voorbeelden="[verwijderd]";
+      else
+        temp=data[pos][vol1].split('nieuwe_pagina<br/>');
+      
+      tekst_voorbeelden=temp[0];
+      for (n=1;n<temp.length;n++)
+        tekst_voorbeelden=tekst_voorbeelden+temp[n];
+    }
+  }
+  else
+  {
+    if (aantal_sub_paginaas==1)
+    {
+      if (pos==0.5)
+        tekst_voorbeelden="[verwijderd]";
+      else
+        if (pos==0.5)
+          tekst_voorbeelden="[verwijderd]";
+        else
+          tekst_voorbeelden=data[pos][vol2];
+    }
+    else
+    {
+      if (pos==0.5)
+        tekst_voorbeelden="[verwijderd]";
+      else
+        temp=data[pos][vol2].split('nieuwe_pagina<br/>');
+
+      tekst_voorbeelden=temp[huidige_sub_pagina-1];
+    }
+  }
+
+  // Vervang spaties aan begin van tekst
+  // door spaties die echt worden afgebeeld.
+  tekst_voorbeelden=tekst_voorbeelden.replace(/  /g,"&nbsp;&nbsp;&nbsp;");
+  tekst_voorbeelden=tekst_voorbeelden.replace(/<br\/> /g,"<br/>&nbsp;");
+
+  if (pos==0.5)
+  {
+    tekst_voorbeelden="[verwijderd]";
+  }
+  else
+  {
+    if (slot_is_aan==1)
+    {
+      if (parseInt(data[pos][2])<=-1)
+        tekst_voorbeelden="[slot]";
+    }
+  }
+
+  tekst_naar_het_scherm();
+  label_naar_het_scherm();
+
+  sla_parameters_op();
+}
+
+function tekst_naar_het_scherm() 
+{
+  var newElt=document.getElementById('voorbeelden_div');
+  //newElt.innerHTML='<font size=2px>' + tekst_voorbeelden + '</font>';
+  newElt.innerHTML='<font size=' + tekst_grootte + 'px>' + tekst_voorbeelden + '</font>';
+
+  // Dit is nodig voor internet explorer.
+  //var cssString='font-size:' + tekst_grootte + 'px;';  
+  //var cssString='font-size:' + 20 + 'px;';  
+  //newElt.style.cssText=cssString;
+  //newElt.setAttribute('style',cssString);
+}
+
+function info_tekst_naar_het_scherm() 
+{
+  var newElt=document.getElementById('voorbeelden_div');
+
+  newElt.innerHTML=textinfo;
+
+  // Dit is nodig voor internet explorer.
+  //var cssString='font-size:' + info_grootte + 'px;';
+  //newElt.style.cssText=cssString;
+  //newElt.setAttribute('style',cssString);
+}
+
+function label_naar_het_scherm() 
+{
+  var newElt=document.getElementById('label_div');
+
+  //newElt.innerHTML='<font size=1px>' + label + '</font>';
+  newElt.innerHTML='<font size=' + label_grootte + 'px>' + label + '</font>';
+
+  // Dit is nodig voor internet explorer.
+  //var cssString='font-size:' + label_grootte + 'px;';
+  //newElt.style.cssText=cssString;
+  //newElt.setAttribute('style',cssString);
+}
+
+function bepaal_aantal_sub_paginaas()
+{
+  var temp=new Array();
+  
+  aantal_sub_paginaas=1;
+
+  pos=0;
+ 
+  if (italiaans_nederlands==1)
+  {
+    if (mode==0)
+    {
+      aantal_sub_paginaas_bekijk=1;
+      return;
+    }
+    else
+    {
+      aantal_sub_paginaas_herhaal=1;
+      return;
+    }
+  }
+
+  if (mode==0)
+  {
+    pos=rand_pos_bekijk[item_bekijk];
+  }
+  else
+  {
+    pos=positie[Math.abs(rand_pos_herhaal[item_herhaal])];
+    if (pos==0.5)
+    {
+      aantal_sub_paginaas_herhaal=1;
+      return;
+    }
+  }
+
+  temp=data[pos][1].split('nieuwe_pagina');
+  aantal_sub_paginaas=temp.length;
+
+  if (mode==0)
+    aantal_sub_paginaas_bekijk=aantal_sub_paginaas;
+  else
+    aantal_sub_paginaas_herhaal=aantal_sub_paginaas;
+}
+
+</script>
+
+<script>
+
+function rand_array_herhaal()
+{
+  var s;
+  var random_number;
+  var aantal_items;
+
+  for (n=0;n<aantal_items_herhaal;n++)
+  {
+    aux_pos[n]=rand_pos_herhaal[n];
+  }
+
+  m=-1;
+  for (n=0;n<aantal_items_herhaal;n++)
+  {
+    s=aantal_items_herhaal-n;
+    random_number=Math.floor(Math.random()*s);
+    rand_pos_herhaal[++m]=aux_pos[random_number];
+    aux_pos[random_number]=aux_pos[s-1];
+  }
+}
+
+function onEnter(e)
+{
+  if (window.event) 
+  { 
+    e = window.event;
+  }
+
+  if (e.keyCode==13)
+  {
+    // blur betekent unfocus textbox
+    // hier hoef je niet te wachten zoals bij focus!!?
+    document.getElementById('zoekwoord_button').blur();
+    volgende_zoeken();
+  }
+}
+
+function opnieuw_zoeken()
+{
+  stop_zoeken();
+  zoeken();
+}
+
+function zoeken()
+{
+  if (zoeken_bekijk==1 || aan_het_zoeken==1) 
+  {
+    stop_zoeken();
+    zoeken();
+    return;
+  }
+  tekst_voorbeelden='';
+  tekst_naar_het_scherm();
+  label='';
+  label_naar_het_scherm();
+
+  knoppen=1;
+  zoeken_bekijk=1;
+
+  if (aanmelden_bekijk==1)
+    document.getElementById('gebruiker_button').style.display='none';
+
+  document.getElementById('zoekwoord_button').style.display='inline';
+  document.getElementById('volgende_zoeken_button').style.display='inline';
+  document.getElementById('stop_zoeken_button').style.display='inline';
+  document.getElementById('wissen_button').style.display='inline';
+  document.getElementById('wissen2_button').style.display='none';
+  niets_meer_gevonden=-1;
+  knoppen_uit();
+  // Wachten moet anders werkt het niet!!!
+  setTimeout("document.getElementById('zoekwoord_button').focus();",1);
+}
+
+function niveau()
+{
+  if (zoeken_bekijk==1 || aan_het_zoeken==1) stop_zoeken();
+  
+  wat=confirm("EEN ANDERE MOEILIJKHEIDSGRAAD?\n\nEr volgt dan ook een nieuwe willekeurige\nvolgorde van de hoofdlijst?");
+
+  if (wat==1)
+  {
+    moeilijkheidsgraad++;
+    if (moeilijkheidsgraad>maximum_moeilijkheidsgraad)
+      moeilijkheidsgraad=1;
+    
+    if (moeilijkheidsgraad==1)
+    {
+      document.getElementById('niveau_button').value='P1A';
+      aantal_voorbeelden=aantal_voorbeelden1A;
+    }
+    if (moeilijkheidsgraad==2)
+    {
+      document.getElementById('niveau_button').value='P1B';
+      aantal_voorbeelden=aantal_voorbeelden1B;
+    }
+    if (moeilijkheidsgraad==3)
+    {
+      document.getElementById('niveau_button').value='P1C';
+      aantal_voorbeelden=aantal_voorbeelden1C;
+    }
+    if (moeilijkheidsgraad==4)
+    {
+      document.getElementById('niveau_button').value='P1D';
+      aantal_voorbeelden=aantal_voorbeelden1D;
+    }
+    if (moeilijkheidsgraad==5)
+    {
+      document.getElementById('niveau_button').value='P1E';
+      aantal_voorbeelden=aantal_voorbeelden1E;
+    }
+    if (moeilijkheidsgraad==6)
+    {
+      document.getElementById('niveau_button').value='P1F';
+      aantal_voorbeelden=aantal_voorbeelden1F;
+    }
+    if (moeilijkheidsgraad==7)
+    {
+      document.getElementById('niveau_button').value='P1G';
+      aantal_voorbeelden=aantal_voorbeelden1G;
+    }
+    if (moeilijkheidsgraad==8)
+    {
+      document.getElementById('niveau_button').value='P1H';
+      aantal_voorbeelden=aantal_voorbeelden1H;
+    }
+    if (moeilijkheidsgraad==9)
+    {
+      document.getElementById('niveau_button').value='P1I';
+      aantal_voorbeelden=aantal_voorbeelden1I;
+    }
+    if (moeilijkheidsgraad==10)
+    {
+      document.getElementById('niveau_button').value='P1J';
+      aantal_voorbeelden=aantal_voorbeelden1J;
+    }
+    if (moeilijkheidsgraad==11)
+    {
+      document.getElementById('niveau_button').value='P1K';
+      aantal_voorbeelden=aantal_voorbeelden1K;
+    }
+    if (moeilijkheidsgraad==12)
+    {
+      document.getElementById('niveau_button').value='P1';
+      aantal_voorbeelden=aantal_voorbeelden1;
+    }
+    if (moeilijkheidsgraad==13)
+    {
+      document.getElementById('niveau_button').value='P2';
+      aantal_voorbeelden=aantal_voorbeelden2;
+    }
+    if (moeilijkheidsgraad==14)
+    {
+      document.getElementById('niveau_button').value='P3';
+      aantal_voorbeelden=aantal_voorbeelden3;
+    }
+    if (moeilijkheidsgraad==15)
+    {
+      document.getElementById('niveau_button').value='P4';
+      aantal_voorbeelden=aantal_voorbeelden4;
+    }
+
+    aantal_items_bekijk=aantal_voorbeelden;
+    taal_bekijk=1;
+    item_bekijk=0;
+    rand_array_bekijk();
+    bepaal_aantal_sub_paginaas();
+    tekst_afbeelden();
+    sla_parameters_op();
+  }
+}
+
+function aanmelden()
+{
+  if (zoeken_bekijk==1 || aan_het_zoeken==1) stop_zoeken();
+
+  if (zoeken_bekijk==1)
+  {
+     document.getElementById('zoekwoord_button').style.display='none';
+     document.getElementById('wissen_button').style.display='none';
+     document.getElementById('wissen2_button').style.display='none';
+     document.getElementById('volgende_zoeken_button').style.display='none';
+     document.getElementById('stop_zoeken_button').style.display='none';
+     document.getElementById('opnieuw_zoeken_button').style.display='none';
+  }
+
+  aanmelden_bekijk=-aanmelden_bekijk;
+
+  if (aanmelden_bekijk==1)
+    document.getElementById('gebruiker_button').style.display='inline';
+  else
+    document.getElementById('gebruiker_button').style.display='none';
+
+  sla_parameters_op()
+}
+
+function zoekwoord_instellen()
+{
+  zoekwoord_string=document.getElementById('zoekwoord_button').value;
+
+  zoekwoord_string=zoekwoord_string.toLowerCase();
+}
+
+function wissen()
+{
+  document.getElementById('zoekwoord_button').value='';
+  knoppen_uit();
+  // Wachten moet anders werkt het niet!!!
+  setTimeout("document.getElementById('zoekwoord_button').focus();",1);
+  n_zoek=0;
+}
+function wissen2()
+{
+  document.getElementById('zoekwoord_button').value='';
+  n_zoek=0;
+}
+
+function gebruiker_instellen()
+{
+  gebruiker_string=document.getElementById('gebruiker_button').value;
+  gebruiker_string=gebruiker_string.toLowerCase();
+
+  initialisatie()
+}
+
+function tekst_groter()
+{
+  tekst_grootte++;
+  info_weg();
+  sla_parameters_op();
+
+  tekst_voorbeelden=tekst_voorbeelden+"grootte tekst: " + tekst_grootte + "px";
+  tekst_voorbeelden=tekst_voorbeelden+"<br/>"+"grootte label: " + label_grootte + "px";
+
+  tekst_naar_het_scherm();
+  label_naar_het_scherm();
+}
+
+function tekst_kleiner()
+{
+  tekst_grootte--;
+
+  if (tekst_grootte==0)
+    tekst_grootte=1;
+
+  info_weg();
+  sla_parameters_op();
+
+  tekst_voorbeelden=tekst_voorbeelden+"grootte tekst: " + tekst_grootte + "px";
+  tekst_voorbeelden=tekst_voorbeelden+"<br/>"+"grootte label: " + label_grootte + "px";
+
+  tekst_naar_het_scherm();
+  label_naar_het_scherm();
+}
+
+function label_groter()
+{
+  label_grootte++;
+  info_weg();
+  sla_parameters_op();
+
+  tekst_voorbeelden=tekst_voorbeelden+"grootte tekst: " + tekst_grootte + "px";
+  tekst_voorbeelden=tekst_voorbeelden+"<br/>"+"grootte label: " + label_grootte + "px";
+
+  tekst_naar_het_scherm();
+}
+
+function label_kleiner()
+{
+  label_grootte--;
+
+  if (label_grootte==0)
+    label_grootte=1;
+
+  info_weg();
+  sla_parameters_op();
+
+  tekst_voorbeelden=tekst_voorbeelden+"grootte tekst: " + tekst_grootte + "px";
+  tekst_voorbeelden=tekst_voorbeelden+"<br/>"+"grootte label: " + label_grootte + "px";
+
+  //tekst_naar_het_scherm();
+  tekst_afbeelden();
+
+  //if (label_is_zichtbaar==1)
+   // label_naar_het_scherm();
+}
+
+function info_groter()
+{
+  info_grootte++;
+
+  info_weg();
+  info();
+  sla_parameters_op();
+}
+
+function info_kleiner()
+{
+  info_grootte--;
+
+  if (info_grootte==0)
+    info_grootte=1;
+
+  info_weg();
+  info();
+  sla_parameters_op();
+}
+
+function tokkel_rand_array()
+{
+  var wat=1;
+
+  if (zoeken_bekijk==1 || aan_het_zoeken==1) stop_zoeken();
+
+  if (mode==0)
+    wat=confirm("EEN NIEUWE WILLEKEURIGE VOLGORDE VAN DE HOOFDLIJST?");
+  else
+    wat=confirm("EEN NIEUWE WILLEKEURIGE VOLGORDE VAN DE HERHAALLIJST?");
+
+  if (wat==0) return;
+
+  if (mode==0)
+  {
+    rand_array_bekijk();
+    taal_bekijk=1;
+    item_bekijk=0;
+    bepaal_aantal_sub_paginaas();
+    tekst_afbeelden();
+  }
+  else
+  {
+    rand_array_herhaal();
+    taal_herhaal=1;
+    item_herhaal=0;
+    bepaal_aantal_sub_paginaas();
+    tekst_afbeelden();
+  }
+}
+
+function volgende_zoeken()
+{
+  zoekwoord_instellen();
+  if (zoekwoord_string=='' || zoekwoord_string==' ')
+  {
+    stop_zoeken();
+    return;
+  }
+  zoek_item();
+}
+
+function stop_zoeken()
+{
+  if (zoeken_bekijk==1)
+  {
+    document.getElementById('zoekwoord_button').style.display='none';
+    document.getElementById('wissen_button').style.display='none';
+    document.getElementById('wissen2_button').style.display='none';
+    document.getElementById('volgende_zoeken_button').style.display='none';
+    document.getElementById('stop_zoeken_button').style.display='none';
+    document.getElementById('opnieuw_zoeken_button').style.display='none';
+    zoeken_bekijk=-1;
+  }
+
+  n_zoek=0;
+  item_zoek=0;
+  zoekwoord_string_oud="scriptxx";
+  aan_het_zoeken=-1;
+  knoppen=1;
+  niets_meer_gevonden=-1;
+
+  if (parameters_veranderd_voor_het_zoeken==1)
+  {
+    moeilijkheidsgraad=zoek_bew_moeilijkheidsgraad;
+    aantal_voorbeelden=zoek_bew_aantal_voorbeelden;
+    aantal_items_bekijk=zoek_bew_aantal_items_bekijk;
+    mode=zoek_bew_mode;
+    item_bekijk=zoek_bew_item_bekijk;
+    item_herhaal=zoek_bew_item_herhaal;
+    taal_bekijk=zoek_bew_taal_bekijk;
+    taal_herhaal=zoek_bew_taal_herhaal;
+    huidige_sub_pagina=zoek_bew_huidige_sub_pagina;
+    aantal_sub_paginaas=zoek_bew_aantal_sub_paginaas;
+    huidige_sub_pagina_bekijk=zoek_bew_huidige_sub_pagina_bekijk;
+    aantal_sub_paginaas_bekijk=zoek_bew_aantal_sub_paginaas_bekijk;
+    huidige_sub_pagina_herhaal=zoek_bew_huidige_sub_pagina_herhaal;
+    aantal_sub_paginaas_herhaal=zoek_bew_aantal_sub_paginaas_herhaal;
+
+    for (n=0;n<aantal_items_bekijk;n++)
+    {
+      rand_pos_bekijk[n]=zoek_bew_rand_pos_bekijk[n];
+    }
+    parameters_veranderd_voor_het_zoeken=-1;
+  }
+
+  if (buttons_zijn_zichtbaar==1)
+    buttons_afbeelden();
+  if (aanmelden_bekijk==1)
+    document.getElementById('gebruiker_button').style.display='inline';
+
+  bepaal_aantal_sub_paginaas();
+  tekst_afbeelden();
+}
+
+function maak_zoekdata()
+{
+  var n;
+  var str;
+  var k;
+
+  for (n=0;n<max_aantal_items_bekijk;n++)
+  {
+    zoekdata[n]=new Array(2);
+  }
+
+  for (n=0;n<max_aantal_items_bekijk;n++)
+  {
+    for (k=0;k<=1;k++)
+    { 
+      str=data[n][k];
+
+      str=str.toLowerCase();
+      str=str.replace(/<u>/g, "");
+      str=str.replace(/<\/u>/g, "");
+      str=str.replace(/&agrave;/g, "a");
+      str=str.replace(/&egrave;/g, "e");
+      str=str.replace(/&igrave;/g, "i");
+      str=str.replace(/&ugrave;/g, "u");
+      str=str.replace(/&ograve;/g, "o");
+      str=str.replace(/&aacute;/g, "a");
+      str=str.replace(/&eacute;/g, "e");
+      str=str.replace(/&iacute;/g, "i");
+      str=str.replace(/&uacute;/g, "u");
+      str=str.replace(/&oacute;/g, "o");
+      str=str.replace(/&auml;/g, "a");
+      str=str.replace(/&euml;/g, "e");
+      str=str.replace(/&iuml;/g, "i");
+      str=str.replace(/&uuml;/g, "u");
+      str=str.replace(/&ouml;/g, "o");
+
+      zoekdata[n][k]=str;
+    }
+  }
+}
+
+
+function zoek_item()
+{
+  var n;
+  var str;
+  var gevonden;
+  var sl;
+
+  knoppen=1;
+  tekst_voorbeelden='';
+  tekst_naar_het_scherm();
+  label='';
+  label_naar_het_scherm();
+
+  if (aan_het_zoeken==1)
+  {
+    if (zoekwoord_string_oud!=zoekwoord_string)
+    {
+      n_zoek=0;
+      item_zoek=0;
+    }
+  }
+  else
+  {
+    n_zoek=0;
+    item_zoek=0;
+  }
+
+  zoekwoord_string_oud=zoekwoord_string;
+  aan_het_zoeken=1;
+
+  if (parameters_veranderd_voor_het_zoeken==-1)
+  {
+    zoek_bew_moeilijkheidsgraad=moeilijkheidsgraad;
+    zoek_bew_aantal_voorbeelden=aantal_voorbeelden;
+    zoek_bew_aantal_items_bekijk=aantal_items_bekijk;
+    zoek_bew_mode=mode;
+    zoek_bew_item_bekijk=item_bekijk;
+    zoek_bew_item_herhaal=item_herhaal;
+    zoek_bew_taal_bekijk=taal_bekijk;
+    zoek_bew_taal_herhaal=taal_herhaal;
+    zoek_bew_huidige_sub_pagina=huidige_sub_pagina;
+    zoek_bew_aantal_sub_paginaas=aantal_sub_paginaas;
+    zoek_bew_huidige_sub_pagina_bekijk=huidige_sub_pagina_bekijk;
+    zoek_bew_aantal_sub_paginaas_bekijk=aantal_sub_paginaas_bekijk;
+    zoek_bew_huidige_sub_pagina_herhaal=huidige_sub_pagina_herhaal;
+    zoek_bew_aantal_sub_paginaas_herhaal=aantal_sub_paginaas_herhaal;
+    for (n=0;n<aantal_items_bekijk;n++)
+    {
+      zoek_bew_rand_pos_bekijk[n]=rand_pos_bekijk[n];
+    }
+
+    moeilijkheidsgraad=maximum_moeilijkheidsgraad;
+    aantal_voorbeelden=max_aantal_items_bekijk;
+    aantal_items_bekijk=max_aantal_items_bekijk;
+    for (n=0;n<aantal_items_bekijk;n++)
+    {
+       rand_pos_bekijk[n]=n;
+    }
+    parameters_veranderd_voor_het_zoeken=1;
+  }
+
+  mode=0;
+  if (buttons_zijn_zichtbaar==1)
+    buttons_afbeelden();
+  gevonden=0;
+  for (n=n_zoek;n<aantal_voorbeelden;n++)
+  {
+  for (k=0;k<=1;k++)
+  {
+    str=zoekdata[n][k];
+
+    if (str.search(zoekwoord_string)!=-1)
+    {
+      gevonden=1;
+      break;
+    }
+  }
+  if (gevonden==1) break;
+  }
+
+  n_zoek=n+1;
+  item_zoek=n;
+
+  if (gevonden==0) 
+  {
+    document.getElementById('zoekwoord_button').style.display='none';
+    document.getElementById('volgende_zoeken_button').style.display='none';
+    document.getElementById('wissen2_button').style.display='inline';
+    document.getElementById('wissen_button').style.display='none';
+    document.getElementById('opnieuw_zoeken_button').style.display='inline';
+    item_bekijk=0;
+    n_zoek=0;
+    niets_meer_gevonden=1;
+    return;
+  }
+
+  taal_herhaal=1;
+  item_herhaal=0;
+  taal_bekijk=1;
+  item_bekijk=item_zoek;
+  bepaal_aantal_sub_paginaas();
+  tekst_afbeelden();
+}
+
+function verwijder_item()
+{
+  var item_nummer;
+
+  if (zoeken_bekijk==1 || aan_het_zoeken==1) stop_zoeken();
+
+  if (mode==0) return;
+
+  if (aantal_items_herhaal==0)
+    return;
+
+  aantal_items_herhaal_nu=aantal_items_herhaal;
+  m=-1;
+  for (item_nummer=0;item_nummer<aantal_items_herhaal_nu;item_nummer++)
+  {
+    if (item_nummer!=item_herhaal)
+      rand_pos_herhaal[++m]=rand_pos_herhaal[item_nummer];
+    else
+      aantal_items_herhaal--;
+  }
+  if (item_herhaal>aantal_items_herhaal-1)
+    item_herhaal=0;
+
+  if (aantal_items_herhaal==0)
+  {
+    mode=0;
+    item_herhaal=0;
+    taal_herhaal=1;
+  }
+  else
+  {
+    taal_herhaal=1;
+  }
+
+  if (buttons_zijn_zichtbaar==1)
+    buttons_afbeelden();
+
+  if (mode==0)
+  {
+    huidige_sub_pagina_bekijk=huidige_sub_pagina;
+    aantal_sub_paginaas_bekijk=aantal_sub_paginaas;
+  }
+  else
+  {
+    huidige_sub_pagina_herhaal=huidige_sub_pagina;
+    aantal_sub_paginaas_herhaal=aantal_sub_paginaas;
+  }
+
+  tekst_afbeelden();
+  sla_parameters_op();
+  sla_data_op();
+}
+
+function tokkel_slot()
+{
+  slot_is_aan=-slot_is_aan;
+  sla_parameters_op();
+
+  if (slot_is_aan==1)
+  {
+    document.getElementById('slot_button').value='Slot is aan';
+    alert("Erotische woorden zijn nu niet meer zichtbaar!");
+  }
+  else
+  {
+    document.getElementById('slot_button').value='Slot is uit';
+    alert("Erotische woorden zijn nu zichtbaar!");
+  }
+}
+
+function tokkel_info()
+{
+  if (zoeken_bekijk==1 || aan_het_zoeken==1) stop_zoeken();
+
+  in_info=-in_info;
+  if (in_info==1)
+    info();
+  else
+    info_weg();
+}
+
+function tokkel_italiaans_naar_nederlands()
+{
+  var wat=1;
+
+  if (zoeken_bekijk==1 || aan_het_zoeken==1) stop_zoeken();
+
+  if (italiaans_nederlands==-1)
+    wat=confirm("NAAR ITALIAANS-NEDERLANDS?\n\nHet programma is bedoeld voor Nederlands-Italiaans.\nOmdat het toch handig kan zijn is ook Italiaans-Nederlands\ntoegevoegd maar het databestand is opgezet vanuit het\nNederlands-Italiaans.");
+  else
+    wat=confirm("NAAR NEDERLANDS-ITALIAANS?");
+
+  if (wat==1)
+  {
+    if (italiaans_nederlands==-1)
+    {
+      italiaans_nederlands=1;
+      sla_parameters_op();
+
+      huidige_sub_pagina=1;
+      huidige_sub_pagina_bekijk=1;
+      aantal_sub_paginaas_bekijk=1;
+      huidige_sub_pagina_herhaal=1;
+      aantal_sub_paginaas_herhaal=1;
+    }
+    else
+    {
+      italiaans_nederlands=-1;
+      sla_parameters_op();
+
+      bepaal_aantal_sub_paginaas;
+      huidige_sub_pagina=1;
+      if (mode==0)
+      {
+        huidige_sub_pagina_bekijk=1;
+        aantal_sub_paginaas_bekijk=aantal_sub_paginaas;
+       }
+       else
+       {
+         huidige_sub_pagina_herhaal=1;
+         aantal_sub_paginaas_herhaal=aantal_sub_paginaas;
+       }
+    }
+    
+    tekst_afbeelden();
+    sla_parameters_op();
+  }
+}
+
+function info_weg()
+{
+
+  document.getElementById('slot_button').style.display='none';
+  document.getElementById('info_weg_button').style.display='none';
+  document.getElementById('herstel_button').style.display='none';
+  document.getElementById('tekst_groter_button').style.display='none';
+  document.getElementById('tekst_kleiner_button').style.display='none';
+  document.getElementById('label_groter_button').style.display='none';
+  document.getElementById('label_kleiner_button').style.display='none';
+  document.getElementById('info_groter_button').style.display='none';
+  document.getElementById('info_kleiner_button').style.display='none';
+
+  if (aanmelden_bekijk==1)
+    document.getElementById('gebruiker_button').style.display='inline';
+
+  in_info=-1;
+  if (buttons_zijn_zichtbaar==1)
+    buttons_afbeelden();
+
+  bepaal_aantal_sub_paginaas();
+  tekst_afbeelden();
+}
+
+function uit()
+{
+  var wat=1;
+
+  if (zoeken_bekijk==1 || aan_het_zoeken==1) stop_zoeken();
+
+  if (eerste_keer_uit==1)
+    wat=confirm("DEZE OPTIE LAAT KNOPPEN EN TEKST VERDWIJNEN.\n\nDe knoppen en tekst worden weer zichtbaar door\nde u-toets (of eventueel Esc-toets) in te drukken.\nDeze mededeling keert deze sessie niet meer terug");
+
+  if (wat==1)
+  {
+    eerste_keer_uit=0;
+    if (zichtbaar==1)
+    {
+      if (in_info==1)
+      {
+        tekst_voorbeelden='';
+        label='';
+        tekst_naar_het_scherm();
+        label_naar_het_scherm();
+
+        document.getElementById('slot_button').style.display='none';
+        document.getElementById('info_weg_button').style.display='none';
+        document.getElementById('herstel_button').style.display='none';
+        document.getElementById('tekst_groter_button').style.display='none';
+        document.getElementById('tekst_kleiner_button').style.display='none';
+        document.getElementById('label_groter_button').style.display='none';
+        document.getElementById('label_kleiner_button').style.display='none';
+        document.getElementById('info_groter_button').style.display='none';
+        document.getElementById('info_kleiner_button').style.display='none';
+
+        in_info=1;
+      }
+      else
+      {
+        tekst_voorbeelden='';
+        label='';
+        tekst_naar_het_scherm();
+        label_naar_het_scherm();
+
+        if (buttons_zijn_zichtbaar==1)
+          buttons_weg();
+        
+        if (aanmelden_bekijk==1)
+          document.getElementById('gebruiker_button').style.display='none';
+      }
+      zichtbaar=-1;
+    }
+    else
+    {
+       if (in_info==1)
+       {
+         document.getElementById('slot_button').style.display='inline';
+         document.getElementById('info_weg_button').style.display='inline';
+         document.getElementById('herstel_button').style.display='inline';
+         document.getElementById('tekst_groter_button').style.display='inline';
+         document.getElementById('tekst_kleiner_button').style.display='inline';
+         document.getElementById('label_groter_button').style.display='inline';
+         document.getElementById('label_kleiner_button').style.display='inline';
+         document.getElementById('info_groter_button').style.display='inline';
+         document.getElementById('info_kleiner_button').style.display='inline';
+
+         info_tekst_naar_het_scherm();
+       }
+       else
+       {
+         if (buttons_zijn_zichtbaar==1)
+           buttons_afbeelden();
+
+         if (aanmelden_bekijk==1)
+           document.getElementById('gebruiker_button').style.display='inline';
+
+         tekst_afbeelden();
+       }
+       zichtbaar=1;
+    }
+  }
+}
+
+function sla_parameters_op()
+{
+  if (parameters_veranderd_voor_het_zoeken==1)
+  {
+    num_string=' ';
+    num_string=num_string+aantal_items_herhaal;
+    num_string=num_string+' ';
+    num_string=num_string+zoek_bew_item_herhaal;
+    num_string=num_string+' ';
+    num_string=num_string+zoek_bew_taal_herhaal;
+    num_string=num_string+' ';
+    num_string=num_string+zoek_bew_item_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+zoek_bew_taal_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+zoek_bew_mode;
+    num_string=num_string+' ';
+    num_string=num_string+seed_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+kleur_nummer;
+    num_string=num_string+' ';
+    num_string=num_string+slot_is_aan;
+    num_string=num_string+' ';
+    num_string=num_string+aanmelden_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+niveau_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+zoek_bew_huidige_sub_pagina_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+zoek_bew_aantal_sub_paginaas_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+zoek_bew_huidige_sub_pagina_herhaal;
+    num_string=num_string+' ';
+    num_string=num_string+zoek_bew_aantal_sub_paginaas_herhaal;
+    num_string=num_string+' ';
+    num_string=num_string+italiaans_nederlands;
+    num_string=num_string+' ';
+    num_string=num_string+buttons_zijn_zichtbaar;
+    num_string=num_string+' ';
+    num_string=num_string+label_is_zichtbaar;
+    num_string=num_string+' ';
+    num_string=num_string+zoek_bew_moeilijkheidsgraad;
+    num_string=num_string+' ';
+    num_string=num_string+tekst_grootte;
+    num_string=num_string+' ';
+    num_string=num_string+label_grootte;
+    num_string=num_string+' ';
+    num_string=num_string+info_grootte;
+    num_string=num_string+' ';
+  }
+  else
+  {
+    num_string=' ';
+    num_string=num_string+aantal_items_herhaal;
+    num_string=num_string+' ';
+    num_string=num_string+item_herhaal;
+    num_string=num_string+' ';
+    num_string=num_string+taal_herhaal;
+    num_string=num_string+' ';
+    num_string=num_string+item_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+taal_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+mode;
+    num_string=num_string+' ';
+    num_string=num_string+seed_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+kleur_nummer;
+    num_string=num_string+' ';
+    num_string=num_string+slot_is_aan;
+    num_string=num_string+' ';
+    num_string=num_string+aanmelden_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+niveau_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+huidige_sub_pagina_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+aantal_sub_paginaas_bekijk;
+    num_string=num_string+' ';
+    num_string=num_string+huidige_sub_pagina_herhaal;
+    num_string=num_string+' ';
+    num_string=num_string+aantal_sub_paginaas_herhaal;
+    num_string=num_string+' ';
+    num_string=num_string+italiaans_nederlands;
+    num_string=num_string+' ';
+    num_string=num_string+buttons_zijn_zichtbaar;
+    num_string=num_string+' ';
+    num_string=num_string+label_is_zichtbaar;
+    num_string=num_string+' ';
+    num_string=num_string+moeilijkheidsgraad;
+    num_string=num_string+' ';
+    num_string=num_string+tekst_grootte;
+    num_string=num_string+' ';
+    num_string=num_string+label_grootte;
+    num_string=num_string+' ';
+    num_string=num_string+info_grootte;
+    num_string=num_string+' ';
+  }
+
+  eraseCookie(cookie_naam0);
+  createCookie(cookie_naam0,num_string,360);
+}
+
+function sla_data_op()
+{
+  if (aantal_items_herhaal>0)
+  {
+    if (aantal_items_herhaal<=250)
+    {
+       num_string=' ';
+       for (n=0;n<aantal_items_herhaal;n++)
+       {
+         num_string=num_string+rand_pos_herhaal[n];
+         num_string=num_string+' ';
+       }
+
+       eraseCookie(cookie_naam1);
+       createCookie(cookie_naam1,num_string,360);
+    }
+    else
+    {
+       num_string=' ';
+       for (n=0;n<250;n++)
+       {
+         num_string=num_string+rand_pos_herhaal[n];
+         num_string=num_string+' ';
+       }
+
+       eraseCookie(cookie_naam1);
+       createCookie(cookie_naam1,num_string,360);
+
+       num_string=' ';
+       for (n=250;n<aantal_items_herhaal;n++)
+       {
+         num_string=num_string+rand_pos_herhaal[n];
+         num_string=num_string+' ';
+       }
+
+       eraseCookie(cookie_naam2);
+       createCookie(cookie_naam2,num_string,360);
+    }
+  }
+}
+
+function lees_parameters_en_selecties()
+{
+  num_string=readCookie(cookie_naam0);
+
+  if (num_string==null)
+  {
+    //ran=Math.random();
+    //seed_bekijk=1+Math.floor(ran*(100000-1));
+  }
+  else
+  {
+    var temp=new Array();
+    temp=num_string.split(' ');
+
+    m=-1;
+    aantal_items_herhaal=parseInt(temp[++m]);
+    item_herhaal=parseInt(temp[++m]);
+    taal_herhaal=parseInt(temp[++m]);
+    item_bekijk=parseInt(temp[++m]);
+    taal_bekijk=parseInt(temp[++m]);
+    mode=parseInt(temp[++m]);
+    seed_bekijk=parseInt(temp[++m]);
+    kleur_nummer=parseInt(temp[++m]);
+    slot_is_aan=parseInt(temp[++m]);
+    aanmelden_bekijk=parseInt(temp[++m]);
+    niveau_bekijk=parseInt(temp[++m]);
+    huidige_sub_pagina_bekijk=parseInt(temp[++m]);
+    aantal_sub_paginaas_bekijk=parseInt(temp[++m]);
+    huidige_sub_pagina_herhaal=parseInt(temp[++m]);
+    aantal_sub_paginaas_herhaal=parseInt(temp[++m]);
+    italiaans_nederlands=parseInt(temp[++m]);
+    buttons_zijn_zichtbaar=parseInt(temp[++m]);
+    label_is_zichtbaar=parseInt(temp[++m]);
+    moeilijkheidsgraad=parseInt(temp[++m]);
+    tekst_grootte=parseInt(temp[++m]);
+    label_grootte=parseInt(temp[++m]);
+    info_grootte=parseInt(temp[++m]);
+
+    if (aantal_items_herhaal>0)
+    {
+      if (aantal_items_herhaal<=250)
+      {
+        num_string=readCookie(cookie_naam1);
+        temp=num_string.split(' ');
+
+        for (n=0;n<aantal_items_herhaal;n++)
+          rand_pos_herhaal[n]=parseInt(temp[n]);
+      }
+      else
+      {
+        num_string=readCookie(cookie_naam1);
+        temp=num_string.split(' ');
+
+        for (n=0;n<250;n++)
+          rand_pos_herhaal[n]=parseInt(temp[n]);
+
+        num_string=readCookie(cookie_naam2);
+        temp=num_string.split(' ');
+
+        for (n=250;n<aantal_items_herhaal;n++)
+          rand_pos_herhaal[n]=parseInt(temp[n-250]);
+      }
+    }
+  }
+}
+
+function initialisatie()
+{
+  initialiseer_parameters();
+  lees_parameters_en_selecties();
+  lees_data();
+  bepaal_positie();
+  maak_zoekdata();
+  document.getElementById('initialisatie_button').style.display='none';
+
+  if (aanmelden_bekijk==1)
+    document.getElementById('gebruiker_button').style.display='inline';
+
+  if (moeilijkheidsgraad==1)
+    document.getElementById('niveau_button').value='P1A';
+  if (moeilijkheidsgraad==2)
+    document.getElementById('niveau_button').value='P1B';
+  if (moeilijkheidsgraad==3)
+    document.getElementById('niveau_button').value='P1C';
+  if (moeilijkheidsgraad==4)
+    document.getElementById('niveau_button').value='P1D';
+  if (moeilijkheidsgraad==5)
+    document.getElementById('niveau_button').value='P1E';
+  if (moeilijkheidsgraad==6)
+    document.getElementById('niveau_button').value='P1F';
+  if (moeilijkheidsgraad==7)
+    document.getElementById('niveau_button').value='P1G';
+  if (moeilijkheidsgraad==8)
+    document.getElementById('niveau_button').value='P1H';
+  if (moeilijkheidsgraad==9)
+    document.getElementById('niveau_button').value='P1I';
+  if (moeilijkheidsgraad==10)
+    document.getElementById('niveau_button').value='P1J';
+  if (moeilijkheidsgraad==11)
+    document.getElementById('niveau_button').value='P1K';
+  if (moeilijkheidsgraad==12)
+    document.getElementById('niveau_button').value='P1';
+  if (moeilijkheidsgraad==13)
+    document.getElementById('niveau_button').value='P2';
+  if (moeilijkheidsgraad==14)
+    document.getElementById('niveau_button').value='P3';
+  if (moeilijkheidsgraad==15)
+    document.getElementById('niveau_button').value='P4';
+
+  if (slot_is_aan==1)
+    document.getElementById('slot_button').value='Slot is aan';
+  else
+    document.getElementById('slot_button').value='Slot is uit';
+
+  if (mode==0)
+  {
+    huidige_sub_pagina=huidige_sub_pagina_bekijk;
+    aantal_sub_paginaas=aantal_sub_paginaas_bekijk;
+  }
+  else
+  {
+    huidige_sub_pagina=huidige_sub_pagina_herhaal;
+    aantal_sub_paginaas=aantal_sub_paginaas_herhaal;
+  }
+
+  herkleur();
+
+  if (buttons_zijn_zichtbaar==1)
+    buttons_afbeelden();
+
+
+  rand_array_weer_bekijk();
+  bepaal_aantal_sub_paginaas();
+  sla_parameters_op();
+  tekst_afbeelden();
+}
+
+function info()
+{
+  var n=-1;
+
+  if (zoeken_bekijk==1 || aan_het_zoeken==1) 
+  {
+    stop_zoeken();
+  }
+
+  in_info=1;
+  if (buttons_zijn_zichtbaar==1)
+    buttons_weg()
+
+  label='';
+  label_naar_het_scherm();
+
+  document.getElementById('slot_button').style.display='inline';
+  document.getElementById('info_weg_button').style.display='inline';
+  document.getElementById('herstel_button').style.display='inline';
+  document.getElementById('tekst_groter_button').style.display='inline';
+  document.getElementById('tekst_kleiner_button').style.display='inline';
+  document.getElementById('label_groter_button').style.display='inline';
+  document.getElementById('label_kleiner_button').style.display='inline';
+  document.getElementById('info_groter_button').style.display='inline';
+  document.getElementById('info_kleiner_button').style.display='inline';
+
+  if (aanmelden_bekijk==1)
+    document.getElementById('gebruiker_button').style.display='none';
+
+textinfo=
+["\
+<br/>\
+NEDERLANDSITALIANO<br/>\
+(Terug naar het hoofdprogramma via knop Terug of de t of i toets)\
+<br/>\
+<br/>\
+<br/>\
+DOEL VAN HET PROGRAMMA:<br/>\
+<br/>\
+Het programma NederlandsItaliano is bedoeld om Nederlandstaligen te ondersteunen bij het leren van de Italiaanse taal. Het programma is vooral opgezet om het Italiaans actief te gebruiken, zoals bij het spreken. Daarom worden voorbeelden aangeboden in het Nederlands, die vervolgens in het Italiaans moeten worden uitgedrukt. Dit gebeurt in willekeurige volgorde. De voorbeelden bestaan uit: woorden, regelmatige en onregelmatige werkwoorden, voorbeeldzinnen en veel gebruikte uitdrukkingen.<br/>\
+<br/>\
+Het databestand bevat zo goed als de gehele Italiaanse taal! Het eerste niveau (P1) bevat ongeveer achtduizend voorbeelden, het laatste niveau (P4) bijna vijftienduizend voorbeelden. Er zit bijna geen redundantie in de voorbeelden. Het eerste niveau is opgedeeld in subniveaus (P1A t/m P1K).<br/>\
+<br/>\
+Als het programma goed bevalt, zal het dagelijks gedurende vele jaren worden gebruikt. Het is natuurlijk wel nodig de uitspraakregels van het Italiaans goed te beheersen.<br/>\
+<br/>\
+<br/>\
+HOE WERKT HET PROGRAMMA:<br/>\
+<br/>\
+Er staat een Nederlands voorbeeld op het scherm en de gebruiker zegt in gedachte (of hardop) hoe het voorbeeld in het Italiaans moet worden gezegd. Klik daarna op Volgende (of drukt op de v toes, de toets pijltje naar rechts of de spatiebalk) en beoordeelt zelf of het antwoord voldoende correct is. Zo ja, ga dan door naar het volgende voorbeeld. Zo niet, klik dan op ''Sla op'' (of drukt de s toets in) en het voorbeeld wordt in een speciale lijst opgeslagen, waarvan de voorbeelden later herhaald kunnen worden.<br/>\
+<br/>\
+Door op Herhaal te klikken (of de h toets in te drukken) komt men bij de speciale lijst van te herhalen voorbeelden. Als een voorbeeld voldoende wordt beheerst, kan deze uit de speciale lijst worden verwijderd door op Weg te klikken (of door op w te drukken). Men komt weer terug bij de algemene lijst van voorbeelden door op Bekijken te klikken (of door op b te drukken). Er kan altijd een nieuwe volgorde van zowel de algemene als de speciale  woordenlijst gemaakt worden door op Mix te klikken (of door op m te drukken).<br/>\
+<br/>\
+Probeer bovenstaande eerst uit en lees dan het vervolg van deze info en vooral het hoofdstuk ''aan te raden gebruik''. Probeer de browser na korte tijd af te sluiten om na te gaan of bij het opnieuw inlezen van de site de geselecteerde voorbeelden nog steeds aanwezig zijn. Is dit niet het geval, zie dan ''de opgeslagen waarden worden niet bewaard'' verderop in deze info.<br/>\
+<br/>\
+<br/>\
+REGELS VOOR DE KLEMTOON:<br/>\
+<br/>\
+Het Italiaans geeft in de schrijftaal de klemtoon (accent) niet weer, behalve als de klemtoon op de laatste klinker valt (bv. capacit&agrave;) maar ook dan niet altijd (bv. qui). Over het algemeen valt de klemtoon op de klinker die voor de laatste medeklinker(s) staat. In bijvoorbeeld amo, palo, carro, scacchi, aglio, perforare, subacqueo en sbaglio valt de klemtoon op de a en in bijvoorbeeld scuola of perquisizione valt de klemtoon op de o. In alle gevallen waar van deze regel wordt afgeweken, wordt de klemtoon aangegeven door een streepje onder de klinker waar de klemtoon op valt (bijvoorbeeld: c<u>a</u>mera). Alleen bij woorden die eindigen op abile, ibile, ubile, obile, ebile (of het meervoud eindigend op i) wordt altijd aangenomen dat de klemtoon op de eerste klinker valt van dit einde dus op respectivelijk de a, i, u, o, e. Bij woorden waarbij er geen klinker voor een medeklinker aanwezig is (bv. sei, lui, noia) wordt aangenomen dat de klemtoon valt op de eerste klinker na de laatste medeklinker (dus de e, u en o in de voorbeelden) anders wordt het accent aangegeven (bv. qu<u>i</u>).<br/>\
+<br/>\
+<br/>\
+REGELS VOOR MANNELIJKE EN VROUWELIJKE WOORDEN:<br/>\
+<br/>\
+Of een woord mannelijk of vrouwelijk is vaak duidelijk omdat er il of la voor staat. Als het woord met een klinker begint is dat niet te zien. Het mannelijk of vrouwelijk wordt dan alleen aangegeven als het afwijkt van de algemene regels. De algemene regels zijn:<br/>\
+<br/>\
+Woord eindigt op een a => vrouwelijk (bv. l'<u>a</u>quila)<br/>\
+Tenzij:<br/>\
+  Woord eindigt op ista => zowel mannelijk als vrouwelijk)<br/>\
+<br/>\
+Woord eindigt op een o => mannelijk (bv. l'anno)<br/>\
+Woord eindigt op een i => mannelijk (bv. l'<u>a</u>libi)<br/>\
+Woord eindigt op een klinker => mannelijk (bv. l'<u>a</u>lcol)<br/>\
+Woord einidgt op een e => mannelijk (bv. l'ente)<br/>\
+Tenzij:<br/>\
+  Woord eindigt op zione => vrouwelijk (bv. l'azione)<br/>\
+  Woord eindigt op sione => vrouwelijk (bv. l'impressione)<br/>\
+  Woord eindigt op trice => vrouwelijk (bv. l'attrice)<br/>\
+  Woord eindigt op tudine => vrouwelijk (bv. l'abit<u>u</u>dine)<br/>\
+<br/>\
+<br/>\
+DE NIVEAUS<br/>\
+<br/>\
+Via de knop P1A (of P1B t/m P1K, P1, P2, P3, P4) kan het niveau gekozen worden.<br/>\
+<br/>\
+Niveau P1 bevat de meest voorkomende woorden en de totale grammatica. P1 bevat ongeveer achtduizend voorbeelden. Om niet met zoveel voorbeelden te worden geconfronteerd is niveau P1 onderverdeeld in P1A t/m P1K en dan P1 zelf. P1A bevat voorbeelden 1 t/m 100, P1B 1 t/m 300, P1C 1 t/m 500, P1D 1 t/m 1000, P1E 1 t/m 1500, P1F 1 t/m 2000, P1G 1 t/m 3000, P1H 1 t/m 4000, P1I 1 t/m 5000, P1J 1 t/m 6000, P1K 1 t/m 7000, P1 1 t/m einde van alle basis voorbeelden (ongeveer 8000). Soms is het aantal voorbeelden in een niveau ongeveer zoals aangegeven (dus P1H 1 t/m 3997). De selectie van de voorbeelden in de subniveaus is vrij willekeurig en gaan slechts gedeeltelijk van makkelijk naar moeilijk.<br/>\
+<br/>\
+Niveau P2 voegt manieren van uitdrukken en voorbeeldzinnen toe, die typisch zijn voor de taal. De uitdrukkingen hebben als onderschrift (los). Dit geeft aan dat het voorbeeld niet te letterlijk moet worden genomen maar meer de manier van spreken uitdrukt. De voorbeeld zinnen beginnen met een hoofdletter en eindigen met een punt. P2 voegt ongeveer 2000 voorbeelden toe (totaal aantal voorbeelden ongeveer tienduizend).<br/>\
+<br/>\
+Niveau P3 voegt gewone woorden toe, die moeilijker en zeldzamer zijn dan de woorden van niveau P1. Deze hebben het onderschrift (zeldzaam). P3 voegt ongeveer drieduizend voorbeelden toe (totaal aantal voorbeelden ongeveer dertienduizend).<br/>\
+<br/>\
+Niveau P4 voegt de echt moeilijke woorden toe, die er min of meer toe dienen om ze gezien te hebben. Deze hebben het onderschrift (erg zeldzaam). P4 voegt ongeveer vijftienhonderd voorbeelden toe (totaal aantal voorbeelden ongeveer veertienduizend zevenhonderd en vijftig).<br/>\
+<br/>\
+Op alle niveaus bevatten veel voorbeelden nog de toevoeging (geef: ...). Dit vraagt om aanvullende voorbeelden van uitdrukken, ter aanvulling op de algemene vraag.<br/>\
+<br/>\
+<br/>\
+VERVOLG BESCHRIJVING VAN HET PROGRAMMA:<br/>\
+<br/>\
+Over het algemeen zal er niet met de muis maar met de toetsen van het toetsenbord gewerkt worden. De toetsen zijn gelijk aan de eerste letter van een knop (behalve bij T+, T-, L+, L-, I+,I- bovenaan in deze info). Verder kunnen de spatietoets en de pijltje naar rechts of links toetsen gebruikt worden om vooruit of achteruit te gaan. De x toets laat de knoppen verdwijnen. Door nog een keer op x te drukken komen de knoppen weer terug.<br/>\
+<br/>\
+De werking van knoppen wordt hieronder beschreven:<br/>\
+<br/>\
+VOLGENDE:<br/>\
+Hiermee wordt vooruit gegaan van een vraag naar een antwoord of van een antwoord naar een vraag. Merk op dat sommige vragen (in het Nederlands) meerdere pagina's antwoorden hebben. Dit is bijvoorbeeld het geval bij grammaticale vragen waar de zes tijden ieder op een eigen pagina worden afgebeeld.<br/>\
+<br/>\
+TERUG:<br/>\
+Hiermee wordt achteruit gegaan van een vraag naar een antwoord of van een antwoord naar een vraag. Merk op dat sommige vragen (in het Nederlands) meerdere pagina's antwoorden hebben. Dit is bijvoorbeeld het geval bij grammaticale vragen waar de zes tijden ieder op een eigen pagina worden afgebeeld.<br/>\
+<br/>\
+SLA OP:<br/>\
+Hiermee wordt een voorbeeld, dat volgens de gebruiker niet goed ging, toegevoegd aan de speciale lijst van woorden die later herhaald kunnen worden. Er kunnen maximaal 500 voorbeelden worden geselecteerd. Meer informatie kan er niet worden bewaard en bij meer dan 500 voorbeelden zou de speciale lijst ook zijn doel voorbij schieten. Een bepaald voorbeeld kan maar eenmaal in de speciale lijst voorkomen en zal dus als het al in de speciale lijst voorkomt niet meer worden toegevoegd. Dit is handig als de gebruiker zich niet meer kan herinneren of het voorbeeld al in de speciale lijst voorkomt. Er kan dus gerust bij het zelfde voorbeeld meerdere malen op de selecteer knop worden geklikt.<br/>\
+<br/>\
+WEG:<br/>\
+Hiermee wordt een voorbeeld uit de speciale lijst verwijderd.<br/>\
+<br/>\
+HERHAAL:<br/>\
+Hiermee gaat men naar de speciale lijst van voorbeelden die niet goed gingen en herhaald moeten worden.<br/>\
+<br/>\
+BEKIJKEN:<br/>\
+Hiermee gaat men terug naar de algemene lijst van woorden.<br/>\
+<br/>\
+P1/P2/P3/P4:<br/>\
+Hiermee kan het niveau worden ingesteld.<br/>\
+<br/>\
+MIX:<br/>\
+Met deze knop kan van de lijst van voorbeelden, waar op dat moment aan gewerkt wordt, een nieuwe volgorde worden gemaakt. Er kan dus een nieuwe volgorde worden gemaakt van de algemene lijst van voorbeelden en van de speciale lijst van voorbeelden.<br/>\
+<br/>\
+INFO:<br/>\
+Laat deze info zien. Aan het begin van de info zitten ook een aantal knoppen om enkele opties van het programma in te stellen.<br/>\
+<br/>\
+LABEL:<br/>\
+Het label onderaan een voorbeeld geeft aan:<br/>\
+<br/>\
+V 33/1000-5: vraag 33, van de 1000 vragen, 5 vragen geselecteerd om te herhalen.<br/>\
+A 33/1000-5 antwoord van vraag 33, van de 1000 vragen, 5 vragen geselecteerd om te herhalen.<br/>\
+<br/>\
+Bij het herhalen ziet men:<br/>\
+V 2/5: vraag 2, van de 5 geselecteerde vragen (die niet goed gingen)<br/>\
+A 2/5: antwoord op vraag 2, van de 5 geselecteerde vragen (die niet goed gingen)<br/>\
+<br/>\
+Het label kan onzichtbaar gemaakt worden door op Label te klikken of door de l in te drukken. Door nogmaals op Label te klikken wordt de label weer zichtbaar.<br/>\
+<br/>\
+KLEUR:<br/>\
+Hiermee kan de achtergrond wat minder helder gemaakt worden. Door meerdere malen op Kleur te drukken wordt de achtergrond steeds donkerder. Na de donkerste achtergrond begint de volgorde weer vanaf wit.<br/>\
+<br/>\
+AANMELDEN:<br/>\
+Hiermee kunnen meerdere gebruikers die van de zelfde webbrowser gebruik maken onafhankelijk van elkaar werken. De gegevens die bewaard moeten worden, worden dan op naam opgeslagen. De naam die hier moet worden ingevuld is ongevoelig voor hoofdletters. Gebruikt slechts 1 gebruiker het programma dan is aanmelden niet nodig.<br/>\
+<br/>\
+NE <-> IT:<br/>\
+Hiermee wordt van het Nederlands-Italiaans naar het Italiaans-Nederlands gegaan en vice versa. Het huidige databestand is opgezet om alleen van het Nederlands naar het Italiaans te gaan. Omdat het misschien voor sommige mensen desalniettemin nuttig kan zijn is deze optie toch toegevoegd.<br/>\
+<br/>\
+ZOEKEN:<br/>\
+Het is ook mogelijk om in de data naar een woord te zoeken door op Zoeken te klikken (of de z toets in te drukken). Het zoeken gebeurt altijd in het totale databestand (ongeveer 14750 voorbeelden). Als een woord gevonden is, kan gewoon in de algemene lijst weer vooruit of achteruit gegaan worden (via Volgende of Terug). Het handige is nu dat het gevonden woord gewoon aan de speciale lijst kan worden toegevoegd door op ''Sla op'' te klikken (of de s toets in te drukken). Zo kan een woord dat niet meer beheert wordt worden toegevoegd. Op deze manier kan ook een speciale lijst met woorden gemaakt worden die bijvoorbeeld alleen op kleren betrekking hebben. Dit wordt echter in het algemeen afgeraden omdat men aan het ''vals spelen'' is. In het dagelijks leven is het ook niet mogelijk speciale woorden te gebruiken maar is het nodig alles paraat te hebben. Na het sluiten van het zoeken wordt verder gegaan waar men gebleven was.<br/>\
+<br/>\
+UIT:<br/>\
+Deze knop laat alle tekst en knoppen verdwijnen of maakt ze weer zichtbaar (via toets u).<br/>\
+<br/>\
+X:<br/>\
+Hiermee is het mogelijk de knoppen (waarop met de muis geklikt kan worden) te laten verdwijnen. De knoppen komen weer te voorschijn door de x toets in te drukken.<br/>\
+<br/>\
+SLOT:<br/>\
+Deze knop bevindt zich aan het begin van deze info. Met de knop ''Slot is aan'' of ''Slot is uit'' kunnen erotische woorden uitgesloten worden om daar niet mee geconfronteerd te worden of ermee geconfronteerd te worden op een ongewenst moment (bv. in een volle trein). Er zijn geen erotisch woorden zichtbaar als ''Slot is aan'' te zien is, ook niet bij het zoeken. In plaats van de woorden is [slot] te zien. Te gebruiken op eigen risico!<br/>\
+<br/>\
+HERSTEL:<br/>\
+Hiermee wordt de opgeslagen informatie gewist en terug gegaan naar de standaard parameters. Deze knop in de help is bedoeld voor als het programma ernstige gebreken vertoont. Dit zou nooit moeten voorkomen maar soms kan er misschien een probleem zijn met de in de browser opgeslagen informatie (de Cookie). Op deze manier wordt die informatie gewist. De geselecteerde voorbeelden zullen niet meer beschikbaar zijn<br/>\
+<br/>\
+T+:<br/>\
+Hiermee wordt de tekst van de voorbeelden groter gemaakt. Na het drukken op de knop wordt teruggegaan naar de voorbeelden en onderaan het voorbeeld de tekstgrootte aangegeven.<br/>\
+<br/>\
+T-:<br/>\
+Hiermee wordt de tekst van de voorbeelden kleiner gemaakt. Na het drukken op de knop wordt teruggegaan naar de voorbeelden en onderaan het voorbeeld de tekstgrootte aangegeven.<br/>\
+<br/>\
+L+:<br/>\
+Hiermee wordt de tekst van de label groter gemaakt. Na het drukken op de knop wordt teruggegaan naar de voorbeelden en onderaan het voorbeeld de label grootte aangegeven.<br/>\
+<br/>\
+L-:<br/>\
+Hiermee wordt de tekst van de label kleiner gemaakt. Na het drukken op de knop wordt teruggegaan naar de voorbeelden en onderaan het voorbeeld de label grootte aangegeven.<br/>\
+<br/>\
+I+:<br/>\
+Hiermee wordt de tekst van deze info groter gemaakt. Dit is onmiddellijk zichtbaar in deze info.<br/>\
+<br/>\
+I-:<br/>\
+Hiermee wordt de tekst van deze info kleiner gemaakt. Dit is onmiddellijk zichtbaar in deze info.<br/>\
+<br/>\
+<br/>\
+AAN TE RADEN GEBRUIK:<br/>\
+<br/>\
+Selecteer een niveau (bijvoorbeeld P1A). Bestudeer hiervan een aantal voorbeelden en selecteer de voorbeelden die niet goed gingen. Bestudeer de geselecteerde voorbeelden (via Herhaal) tot de meeste voldoende worden beheerst (en dus allemaal of bijna allemaal uit de speciale lijst zijn verwijderd).<br/>\
+<br/>\
+Ga terug naar de algemene lijst (via Bekijken) en maak een nieuwe volgorde (via Mix). Het doorlopen van de voorbeelden uit de algemene lijst zal nu iets makkelijker gaan.<br/>\
+<br/>\
+Herhaal bovenstaande tot het niveau te makkelijk is geworden en selecteer een hoger niveau (bijvoorbeeld (P2). Dit gebruik wordt aangeraden omdat het waarschijnlijk te zwaar is om alle voorbeelden van een bepaald niveau te doorlopen. Op bovenstaande wijze wordt het steeds iets makkelijker.<br/>\
+<br/>\
+<br/>\
+DE OPGESLAGEN WAARDEN WORDEN NIET BEWAARD:<br/>\
+<br/>\
+De  geselecteerde voorbeelden, het niveau, de kleur van de achtergrond en nog veel meer parameters worden opgeslagen in de webbrowser zodat ze de volgende keer weer beschikbaar zijn. Dit gebeurt in zogenaamde ''Cookies''. Het kan zijn dat de toestemming om informatie op te slaan in cookies uitstaat. In dat geval moet in ieder geval deze site (www.satoshibets.nl) toestemming worden gegeven om informatie in cookies op te slaan, om ervoor te zorgen dat de informatie behouden blijft na het afsluiten van de webbrowser. Over het algemeen staat de informatie over de instellingen van cookies waar ook de andere instellingen van de webbrowser worden ingesteld.<br/>\
+<br/>\
+<br/>\
+VERANTWOORDING:<br/>\
+<br/>\
+Dit progamma is vooral bedoeld ook om een aanzienlijk deel van het Italiaans actief te beheersen. In totaal bevat het programma meer dan 14750 woorden, zinnen en grammaticale oefeningen: met weinig redundantie. Zoveel (en nog meer) woorden en gewone idiomatische uitdrukkingen zijn er in een taal. Dit betekent dat als er elke dag honderd voorbeelden worden bestudeerd, er ongeveer vijf maanden nodig zijn om de hele lijst te doorlopen! Daarom is het ondoenlijk om ook te studeren van het Italiaans naar het Nederlands. Omdat de voorbeelden van het Nederlands naar het Italiaans op een willekeurige volgorde worden gepresenteerd, leert de gebruiker vanzelf het voorbeeld van het Italiaans naar het Nederlands.<br/>\
+<br/>\
+Er is gebruik gemaakt van het feit dat het Italiaans zo goed als fonetisch is, zodat als een woord correct uitgesproken wordt het ook duidelijk is hoe het geschreven moet worden. Daarom hoeft er niet getypt te worden, wat ook weer erg zou ophouden. Typen is in de praktijk ook niet handig omdat je dan exact zou moeten aangeven wat het antwoord is, terwijl je vaak ook iets in de buurt weet op te noemen dat er ook mee door kan.<br/>\
+<br/>\
+Verder is ervoor gekozen om de woorden niet automatisch te presenteren, omdat uit ervaring is gebleken dat voor sommige voorbeelden er veel denktijd nodig is om ze te beantwoorden en bij weer andere juist heel weinig. Een vaste tijd per voorbeeld werkt daarom niet.<br/>\
+Ook is er geen optie om woorden vaker te presenteren afhankelijk van hoe goed beheerst worden. Het is ook belangrijk woorden te herhalen, af en toe woorden te hebben die ''lekker gaan''. Ook zou je steeds een criterium moeten meegeven hoe goed het voorbeeld wel ging, wat ook weer na verloop van tijd kan veranderen en het ook nodig maakt een hele historie mee te slepen. Deze extra's lijken handig maar in de praktijk werken ze niet.<br/>\
+<br/>\
+Er is meer dan zeven jaar gewerkt aan de ontwikkeling van het databestand. Natuurlijk is niet alles perfect wat er in het databestand staat en soms ook afhankelijk van de persoonlijke mening of smaak. Het is in eerste instantie voor persoonlijk gebruik ontwikkeld. Ook is een vertaling bijna altijd maar gedeeltelijk correct. Altijd is het eerste woord in de vertaling de meest gebruikte en hoe meer woorden er staan hoe zeldzamer of vager de vertaling wordt. Voor opmerkingen over het databestand zie Contact.<br/>\
+<br/>\
+<br/>\
+CONTACT:<br/>\
+<br/>\
+NederlandsItaliano is ontwikkeld tijdens een zevenjarig verblijf in Liguri&euml;, Itali&euml;. Contact via een ISSUE in GitHub.<br/>\
+<br/>\
+<br/>\
+"];
+
+info_tekst_naar_het_scherm();
+
+}
+
+function lees_data()
+{
+
+// PAS OP: 1
+// Er mogen geen dubbel accenten in de 
+// data file zitten anders gaat het helemaal fout!!!
+// \" mag wel.
+//
+
+//à, ò, ì, ù, è
+//<u>u</u> zet streep onder het karakter er tussen
+//Het is mogelijk te zoeken naar einde van klasses
+// (basis, zeldzaam, etc.) door te zoeken naar: begin:

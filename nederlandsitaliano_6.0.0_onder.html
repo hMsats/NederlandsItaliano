@@ -1,0 +1,59 @@
+
+aantal_voorbeelden4=data.length;
+
+if (moeilijkheidsgraad==1)
+  aantal_voorbeelden=aantal_voorbeelden1A;
+if (moeilijkheidsgraad==2)
+  aantal_voorbeelden=aantal_voorbeelden1B;
+if (moeilijkheidsgraad==3)
+  aantal_voorbeelden=aantal_voorbeelden1C;
+if (moeilijkheidsgraad==4)
+  aantal_voorbeelden=aantal_voorbeelden1D;
+if (moeilijkheidsgraad==5)
+  aantal_voorbeelden=aantal_voorbeelden1E;
+if (moeilijkheidsgraad==6)
+  aantal_voorbeelden=aantal_voorbeelden1F;
+if (moeilijkheidsgraad==7)
+  aantal_voorbeelden=aantal_voorbeelden1G;
+if (moeilijkheidsgraad==8)
+  aantal_voorbeelden=aantal_voorbeelden1H;
+if (moeilijkheidsgraad==9)
+  aantal_voorbeelden=aantal_voorbeelden1I;
+if (moeilijkheidsgraad==10)
+  aantal_voorbeelden=aantal_voorbeelden1J;
+if (moeilijkheidsgraad==11)
+  aantal_voorbeelden=aantal_voorbeelden1K;
+if (moeilijkheidsgraad==12)
+  aantal_voorbeelden=aantal_voorbeelden1;
+if (moeilijkheidsgraad==13)
+  aantal_voorbeelden=aantal_voorbeelden2;
+if (moeilijkheidsgraad==14)
+  aantal_voorbeelden=aantal_voorbeelden3;
+if (moeilijkheidsgraad==15)
+  aantal_voorbeelden=aantal_voorbeelden4;
+
+max_aantal_items_bekijk=aantal_voorbeelden4;
+aantal_items_bekijk=aantal_voorbeelden;
+
+// Kan door het weghalen van voorbeelden gebeuren.
+if (item_bekijk>aantal_items_bekijk-1)
+  item_bekijk=aantal_items_bekijk-1;
+
+}
+
+function bepaal_positie()
+{
+  for (n=0;n<max_aantal_items_bekijk;n++)
+    positie[n]=0.5;
+
+  for (n=0;n<max_aantal_items_bekijk;n++)
+    positie[Math.abs(parseInt(data[n][2]))]=n;
+}
+
+gebruiker_string='';
+initialisatie();
+
+</script>
+
+</body>
+</html>
