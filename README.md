@@ -1,4 +1,4 @@
-# nederlandsitaliaans
+# NederlandsItaliano
 Nederlands - Italiano voor zelfstudie!
 
 In een browser op een mobieltje:
