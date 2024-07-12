@@ -16,7 +16,7 @@ aux=$(cat data.html | grep "\",\"" | wc -l)
 res1=$(echo "scale=0;$aux/2" | bc -l)
 echo "Controle    : $res1"
 
-# Het aantal items moet gelijk zijn aan aantal "],[" plus het aantal (aan het begin van een regel) [\ 
+# Het aantal voorbeelden moet gelijk zijn aan aantal "],[" plus het aantal (aan het begin van een regel) [\ 
 res2=$(cat data.html | grep '^\["\\' | wc -l)
 aux=$(cat data.html | grep '"\],\["\\' | wc -l)
 res3=$(echo "scale=0;($aux+$res2)/1" | bc -l)
