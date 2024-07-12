@@ -1379,6 +1379,7 @@ function zoekwoord_instellen()
 {
   zoekwoord_string=document.getElementById('zoekwoord_button').value;
 
+  zoekwoord_string=zoekwoord_string.replace(/[^a-zA-Z0-9-\s]/g, '');
   zoekwoord_string=zoekwoord_string.toLowerCase();
 }
 
