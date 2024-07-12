@@ -9,7 +9,7 @@ echo "Controleer ook met % in vi: [ en ] plus ( en ) zie begin en einde data.htm
 cat nederlandsitaliano_boven.html data.html nederlandsitaliano_onder.html > index.html
 
 aw=$(cat data.html | grep "\[\"" | wc -l)
-echo "Aantal items: $aw"
+echo "Aantal voorbeelden: $aw"
 
 # Het aantal "," gedeeld door 2
 aux=$(cat data.html | grep "\",\"" | wc -l)
