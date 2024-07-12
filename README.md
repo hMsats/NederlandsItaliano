@@ -5,7 +5,9 @@ In een browser op een mobieltje:
 
 SatoshiBets.nl/ni
 
-Sla even iets op (cookies worden aangemaakt) dan toevoegen aan het startscherm.
+Sla (voor alle zekerheid) even iets op via "Sla op", zodat cookies worden aangemaakt. 
+
+Dan toevoegen aan het startscherm.
 
 Hierna ziet het programma er uit als een App: 
 
