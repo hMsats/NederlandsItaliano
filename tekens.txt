@@ -1,0 +1,15 @@
+è	&egrave;
+é	&eacute;
+ë	&euml;
+ü	&uuml;
+
+à	a accent grave	&#224;	&agrave;
+á	a accent acute	&#225;	&aacute;
+è	e accent grave	&#232;	&egrave;
+é	e accent acute	&#233;	&eacute;
+ê	e accent circumflex	&#234;	&ecirc;
+ë	e met umlaut	&#235;	&euml;
+ï	i met umlaut	&#239;	&iuml;
+ó	o accent acute	&#243;	&oacute;
+ö	o met umlaut	&#246;	&ouml;
+ü	u met umlaut	&#252;	&uuml;
