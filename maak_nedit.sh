@@ -1,4 +1,6 @@
-\cp -f index.html index_bew.html
+\cp -f index_bew_2.html index_bew_3.html
+\cp -f index_bew_1.html index_bew_2.html
+\mv -f index.html index_bew_1.html
 
 echo "Hiertussen mag niets komen:"
 ./controleer.sh
