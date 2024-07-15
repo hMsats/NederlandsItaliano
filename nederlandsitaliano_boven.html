@@ -1278,6 +1278,8 @@ function niveau()
 
   if (wat==1)
   {
+    document.getElementById("sla_op_of_verwijder_item_button").value="Sla op";
+
     moeilijkheidsgraad++;
     if (moeilijkheidsgraad>maximum_moeilijkheidsgraad)
       moeilijkheidsgraad=1;
@@ -1517,6 +1519,8 @@ function tokkel_rand_array()
     wat=confirm("EEN NIEUWE WILLEKEURIGE VOLGORDE VAN DE HERHAALLIJST?");
 
   if (wat==0) return;
+
+  document.getElementById("sla_op_of_verwijder_item_button").value="Sla op";
 
   if (mode==0)
   {
