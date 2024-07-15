@@ -60,6 +60,7 @@ Het programma wordt geladen ...
 <input style="height: 25px; width: 35px; display: none" id=label_kleiner_button onmousedown=label_kleiner(); value="L-" type=button></input> 
 <input style="height: 25px; width: 35px; display: none" id=info_groter_button onmousedown=info_groter(); value="I+" type=button></input> 
 <input style="height: 25px; width: 35px; display: none" id=info_kleiner_button onmousedown=info_kleiner(); value="I-" type=button></input> 
+<input style="height: 25px; width: 35px; display: none" id=tokkel_it_naar_ned_button onmousedown=tokkel_italiaans_naar_nederlands(); value="I<->N" type=button></input> 
 
 <p style="MARGIN: 0px"></p>
 
@@ -1872,6 +1873,7 @@ function info_weg()
   document.getElementById('label_kleiner_button').style.display='none';
   document.getElementById('info_groter_button').style.display='none';
   document.getElementById('info_kleiner_button').style.display='none';
+  document.getElementById('tokkel_it_naar_ned_button').style.display='none';
 
   if (aanmelden_bekijk==1)
     document.getElementById('gebruiker_button').style.display='inline';
@@ -1914,6 +1916,7 @@ function uit()
         document.getElementById('label_kleiner_button').style.display='none';
         document.getElementById('info_groter_button').style.display='none';
         document.getElementById('info_kleiner_button').style.display='none';
+        document.getElementById('tokkel_it_naar_ned_button').style.display='none';
 
         in_info=1;
       }
@@ -1945,6 +1948,7 @@ function uit()
          document.getElementById('label_kleiner_button').style.display='inline';
          document.getElementById('info_groter_button').style.display='inline';
          document.getElementById('info_kleiner_button').style.display='inline';
+         document.getElementById('tokkel_it_naar_ned_button').style.display='inline';
 
          info_tekst_naar_het_scherm();
        }
@@ -2269,6 +2273,7 @@ function info()
   document.getElementById('label_kleiner_button').style.display='inline';
   document.getElementById('info_groter_button').style.display='inline';
   document.getElementById('info_kleiner_button').style.display='inline';
+  document.getElementById('tokkel_it_naar_ned_button').style.display='inline';
 
   if (aanmelden_bekijk==1)
     document.getElementById('gebruiker_button').style.display='none';
@@ -2418,6 +2423,9 @@ Hiermee wordt de tekst van deze info groter gemaakt. Dit is onmiddellijk zichtba
 <br/>\
 I-:<br/>\
 Hiermee wordt de tekst van deze info kleiner gemaakt. Dit is onmiddellijk zichtbaar in deze info.<br/>\
+<br/>\
+I<->N:<br/>\
+Hoewel het programma er niet voor bedoeld is, kun je hiemee naar het Italiaans-Nederlands gaan en weer terug.<br/>\
 <br/>\
 <br/>\
 AAN TE RADEN GEBRUIK:<br/>\
