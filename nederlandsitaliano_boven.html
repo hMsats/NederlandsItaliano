@@ -1909,7 +1909,10 @@ function info_weg()
 
   in_info=-1;
   if (buttons_zijn_zichtbaar==1)
+  {
     buttons_afbeelden();
+    document.getElementById("sla_op_of_verwijder_item_button").value=info_bew_slaopgedaan;
+  }
 
   bepaal_aantal_sub_paginaas();
   tekst_afbeelden();
@@ -2280,6 +2283,8 @@ function initialisatie()
 function info()
 {
   var n=-1;
+
+  info_bew_slaopgedaan=document.getElementById("sla_op_of_verwijder_item_button").value;
 
   if (zoeken_bekijk==1 || aan_het_zoeken==1) 
   {
