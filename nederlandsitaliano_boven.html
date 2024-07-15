@@ -657,6 +657,7 @@ function buttons_afbeelden()
 
 function kleur()
 {
+
   kleur_nummer++;
   if (kleur_nummer>aantal_kleuren)
     kleur_nummer=1;
@@ -726,6 +727,7 @@ function volgend_item()
 {
   var resultaat=1;
 
+
   bepaal_aantal_sub_paginaas();
 
   if (aantal_sub_paginaas==1)
@@ -738,7 +740,11 @@ function volgend_item()
       {
         if (zoeken_bekijk==1 || aan_het_zoeken==1); 
         else
+        {
+          if (mode==0)
+            document.getElementById("sla_op_of_verwijder_item_button").value='Sla op';
           item_bekijk++;
+        }
         if (item_bekijk>aantal_items_bekijk-1)
           item_bekijk=0;
       }
@@ -775,7 +781,11 @@ function volgend_item()
           taal_bekijk=-taal_bekijk;
           if (zoeken_bekijk==1 || aan_het_zoeken==1); 
           else
+          {
+            if (mode==0)
+              document.getElementById("sla_op_of_verwijder_item_button").value='Sla op';
             item_bekijk++;
+          }
           if (item_bekijk>aantal_items_bekijk-1)
             item_bekijk=0;
         }
@@ -829,7 +839,11 @@ function terug()
       else
         if (zoeken_bekijk==1 || aan_het_zoeken==1); 
         else
+        {
+          if (mode==0)
+            document.getElementById("sla_op_of_verwijder_item_button").value='Sla op';
           item_bekijk--;
+        }
       bepaal_aantal_sub_paginaas();
       huidige_sub_pagina=aantal_sub_paginaas;
       taal_bekijk=-1;
@@ -958,10 +972,12 @@ function sla_op()
     return;
   }
 
+  document.getElementById("sla_op_of_verwijder_item_button").value='Gedaan';
+
   for (n=0;n<aantal_items_herhaal;n++)
   {
     if (positie[rand_pos_herhaal[n]]==rand_pos_bekijk[item_bekijk])
-     return;
+    return;
   }
 
   rand_pos_herhaal[aantal_items_herhaal]=parseInt(data[rand_pos_bekijk[item_bekijk]][2]);
@@ -972,6 +988,10 @@ function sla_op()
   sla_data_op();
 
   tekst_afbeelden();
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function tekst_afbeelden()
