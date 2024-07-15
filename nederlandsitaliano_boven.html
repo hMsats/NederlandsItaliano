@@ -1242,6 +1242,10 @@ function opnieuw_zoeken()
 
 function zoeken()
 {
+  zoek_bew_slaopgedaan=document.getElementById("sla_op_of_verwijder_item_button").value;
+
+  if (mode==0)
+    document.getElementById("sla_op_of_verwijder_item_button").value="Sla op";
   if (zoeken_bekijk==1 || aan_het_zoeken==1) 
   {
     stop_zoeken();
@@ -1278,7 +1282,8 @@ function niveau()
 
   if (wat==1)
   {
-    document.getElementById("sla_op_of_verwijder_item_button").value="Sla op";
+    if (mode==0)
+      document.getElementById("sla_op_of_verwijder_item_button").value="Sla op";
 
     moeilijkheidsgraad++;
     if (moeilijkheidsgraad>maximum_moeilijkheidsgraad)
@@ -1520,7 +1525,8 @@ function tokkel_rand_array()
 
   if (wat==0) return;
 
-  document.getElementById("sla_op_of_verwijder_item_button").value="Sla op";
+  if (mode==0)
+    document.getElementById("sla_op_of_verwijder_item_button").value="Sla op";
 
   if (mode==0)
   {
@@ -1597,8 +1603,10 @@ function stop_zoeken()
     parameters_veranderd_voor_het_zoeken=-1;
   }
 
-  if (buttons_zijn_zichtbaar==1)
+  if (buttons_zijn_zichtbaar==1){
     buttons_afbeelden();
+    document.getElementById("sla_op_of_verwijder_item_button").value=zoek_bew_slaopgedaan;
+  }
   if (aanmelden_bekijk==1)
     document.getElementById('gebruiker_button').style.display='inline';
 
