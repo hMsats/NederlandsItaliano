@@ -742,7 +742,10 @@ function volgend_item()
         else
         {
           if (mode==0)
+          {
             document.getElementById("sla_op_of_verwijder_item_button").value='Sla op';
+            document.getElementById("sla_op_of_verwijder_item_button").style.color='';
+          }
           item_bekijk++;
         }
         if (item_bekijk>aantal_items_bekijk-1)
@@ -783,7 +786,10 @@ function volgend_item()
           else
           {
             if (mode==0)
+            {
               document.getElementById("sla_op_of_verwijder_item_button").value='Sla op';
+              document.getElementById("sla_op_of_verwijder_item_button").style.color='';
+            }
             item_bekijk++;
           }
           if (item_bekijk>aantal_items_bekijk-1)
@@ -841,7 +847,10 @@ function terug()
         else
         {
           if (mode==0)
+          {
             document.getElementById("sla_op_of_verwijder_item_button").value='Sla op';
+            document.getElementById("sla_op_of_verwijder_item_button").style.color='';
+          }
           item_bekijk--;
         }
       bepaal_aantal_sub_paginaas();
@@ -973,6 +982,7 @@ function sla_op()
   }
 
   document.getElementById("sla_op_of_verwijder_item_button").value='Gedaan';
+  document.getElementById("sla_op_of_verwijder_item_button").style.color='green';
 
   for (n=0;n<aantal_items_herhaal;n++)
   {
@@ -1245,7 +1255,10 @@ function zoeken()
   zoek_bew_slaopgedaan=document.getElementById("sla_op_of_verwijder_item_button").value;
 
   if (mode==0)
+  {
     document.getElementById("sla_op_of_verwijder_item_button").value="Sla op";
+    document.getElementById("sla_op_of_verwijder_item_button").style.color='';
+  }
   if (zoeken_bekijk==1 || aan_het_zoeken==1) 
   {
     stop_zoeken();
@@ -1283,7 +1296,10 @@ function niveau()
   if (wat==1)
   {
     if (mode==0)
+    {
       document.getElementById("sla_op_of_verwijder_item_button").value="Sla op";
+      document.getElementById("sla_op_of_verwijder_item_button").style.color='';
+    }
 
     moeilijkheidsgraad++;
     if (moeilijkheidsgraad>maximum_moeilijkheidsgraad)
@@ -1526,7 +1542,10 @@ function tokkel_rand_array()
   if (wat==0) return;
 
   if (mode==0)
+  {
     document.getElementById("sla_op_of_verwijder_item_button").value="Sla op";
+    document.getElementById("sla_op_of_verwijder_item_button").style.color='';
+  }
 
   if (mode==0)
   {
