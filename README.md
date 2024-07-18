@@ -15,3 +15,6 @@ Hierna ziet het programma er uit als een App:
 
 ![Screenshot](voorbeeld.jpg)
 
+&nbsp;   
+
+In het figuur zien we vraag 185 van de 13185 vragen (en antwoorden) en 28 geselecteerde vragen om nog extra op te studeren.
