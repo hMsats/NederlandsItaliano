@@ -1627,6 +1627,11 @@ function stop_zoeken()
   if (buttons_zijn_zichtbaar==1){
     buttons_afbeelden();
     document.getElementById("sla_op_of_verwijder_item_button").value=zoek_bew_slaopgedaan;
+    if (zoek_bew_slaopgedaan == "Gedaan"){
+      document.getElementById("sla_op_of_verwijder_item_button").style.color='green';
+    } else {
+      document.getElementById("sla_op_of_verwijder_item_button").style.color='';
+    }
   }
   if (aanmelden_bekijk==1)
     document.getElementById('gebruiker_button').style.display='inline';
@@ -1932,6 +1937,11 @@ function info_weg()
   {
     buttons_afbeelden();
     document.getElementById("sla_op_of_verwijder_item_button").value=info_bew_slaopgedaan;
+    if (info_bew_slaopgedaan == "Gedaan"){
+      document.getElementById("sla_op_of_verwijder_item_button").style.color='green';
+    } else {
+      document.getElementById("sla_op_of_verwijder_item_button").style.color='';
+    }
   }
 
   bepaal_aantal_sub_paginaas();
