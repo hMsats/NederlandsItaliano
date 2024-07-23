@@ -5,4 +5,7 @@ cat data.html | grep -v "<br/>\\\\$" | grep -v "einde: " | grep -v "begin: " | g
 cat data.html | grep -v "\\\\" | grep -v "data." | grep -v "]]);" | grep -v "]];" | grep -v "//" | grep -v "]);" | grep -v "\"]"
 
 # controleer dat nieuwe_pagina goed geschreven is
-cat data.html | grep "_" | grep -v 'nieuwe_pagina<br\/>\\' | grep -v aantal_voorbeelden
+cat data.html | grep "_" | grep -v '^nieuwe_pagina<br\/>\\' | grep -v aantal_voorbeelden
+
+# controleer dat ieder item een nummer heeft
+cat data.html | grep -B 2 '"\],\["\\' | grep '<br/>\\' | sed 's/<br\/>\\//' | sed '/[0-9]/d'
