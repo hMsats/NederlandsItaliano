@@ -18,24 +18,28 @@ aux=$(cat data.html | grep "\",\"" | wc -l)
 res1=$(echo "scale=0;$aux/2" | bc -l)
 echo "Controle          : $res1"
 
+res12=$(echo "scale=0;$aux" | bc -l)
+aw2=$(echo "scale=0;$aw*2" | bc -l)
+
 # Het aantal voorbeelden moet gelijk zijn aan aantal "],[" plus het aantal (aan het begin van een regel) [\ 
 aux1=$(cat data.html | grep '^\["\\' | wc -l)
 aux2=$(cat data.html | grep '"\],\["\\' | wc -l)
 res2=$(echo "scale=0;($aux2+$aux1)/1" | bc -l)
 echo "Controle          : $res2"
 
-if [ $aw -ne $res1 ]; then
+if [ $aw2 -ne $res12 ]; then
   echo -n "ER IS EEN FOUT OPGETREDEN:"
-  echo "  Aantal voorbeelden niet gelijk aan eerste controle"
+  echo "  Aantal voorbeelden niet gelijk aan eerste controle (aw2:$aw2, res12:$res12)"
   echo "Tip: diff index.html index_bew_1.html"
 fi
 if [ $aw -ne $res2 ]; then
   echo -n "ER IS EEN FOUT OPGETREDEN:"
-  echo "  Aantal voorbeelden niet gelijk aan tweede controle"
+  echo "  Aantal voorbeelden niet gelijk aan tweede controle (aw:$aw, res2:$res2)"
   echo "Tip: diff index.html index_bew_1.html"
 fi
-if [ $res1 -ne $res2 ]; then
+res22=$(echo "scale=0;$res2*2" | bc -l)
+if [ $res12 -ne $res22 ]; then
   echo -n "ER IS EEN FOUT OPGETREDEN:"
-  echo "  De controles zijn niet gelijk"
+  echo "  De controles zijn niet gelijk (res12:$res12, res22:$res22)"
   echo "Tip: diff index.html index_bew_1.html"
 fi
