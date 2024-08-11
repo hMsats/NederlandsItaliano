@@ -9,3 +9,6 @@ cat data.html | grep "_" | grep -v '^nieuwe_pagina<br\/>\\' | grep -v aantal_voo
 
 # controleer dat ieder item een nummer heeft
 cat data.html | grep -B 2 '"\],\["\\' | grep '<br/>\\' | sed 's/<br\/>\\//' | sed '/[0-9]/d'
+
+# controleer dat er geen spatie achter het einde van een regel staat
+cat data.html | grep '<br/>\\ '
