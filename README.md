@@ -1,7 +1,7 @@
 # NederlandsItaliano
 Nederlands - Italiano voor zelfstudie!
 
-In een browser op een mobiel in portretstand:
+In een browser op een mobiel in liggende/landschap stand:
 
 SatoshiBets.nl/ni
 
