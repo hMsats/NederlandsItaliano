@@ -2,6 +2,8 @@
 \cp -f index_bew_1.html index_bew_2.html
 \mv -f index.html index_bew_1.html
 
+cat data_orig.html | sed 's/^  /\&nbsp;\&nbsp;\&nbsp;/g' | sed 's/^ /\&nbsp;/g' > data.html
+
 echo "Hiertussen mag niets komen:"
 ./controleer.sh
 echo "Hiertussen mag niets komen:"
