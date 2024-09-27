@@ -45,3 +45,5 @@ if [ $res12 -ne $res22 ]; then
   echo "  De controles zijn niet gelijk (res12:$res12, res22:$res22)"
   echo "Tip: diff index.html index_bew_1.html"
 fi
+
+\rm -r data.html
