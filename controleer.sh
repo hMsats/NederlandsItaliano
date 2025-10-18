@@ -11,4 +11,9 @@ cat data.html | grep "_" | grep -v '^nieuwe_pagina<br>\\' | grep -v aantal_voorb
 cat data.html | grep -B 2 '"\],\["\\' | grep '<br>\\' | sed 's/<br>\\//' | sed '/[0-9]/d'
 
 # controleer dat er geen spatie achter het einde van een regel staat
-cat data.html | grep '<br>\\ '
+cat data.html | grep -n " $"
+
+# controleer dat er geen spatie achter het einde van een regel staat
+cat data.html | grep -n "<br>\$"
+
+cat data_orig_clean.html | grep -n ")$"

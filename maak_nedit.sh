@@ -2,7 +2,12 @@
 \cp -f index_bew_1.html index_bew_2.html
 \mv -f index.html index_bew_1.html
 
-cat data_orig.html | sed 's/^  /\&nbsp;\&nbsp;\&nbsp;/g' | sed 's/^ /\&nbsp;/g' > data.html
+# Zet overal <br>\ achter maar haal het weg waar dat niet mag (code)
+# Verander ook _NED_ en _IT_ door code
+cat data_orig.html | sed 's/$/<br>\\/' | sed 's/"]<br>\\/"]/' | sed 's/]);<br>\\/]);/' | sed 's/\["\\<br>\\/\["\\/' | sed 's/data.concat(\[<br>\\/data.concat([/' | sed 's/data.length;<br>\\/data.length;/' | sed 's/"],<br>\\/"],/' | sed 's/data=\[<br>\\/data=\[/' | sed 's/"]];<br>\\/"]];/' | sed 's/_NED_<br>\\/"],\["\\/' | sed 's/_IT_<br>\\/","\\/' > data_orig_clean.html
+
+# Verander dubbele spaties in html spaties (&nbsp;).
+cat data_orig_clean.html | sed 's/^  /\&nbsp;\&nbsp;\&nbsp;/g' | sed 's/^ /\&nbsp;/g' > data.html
 
 echo "Hiertussen mag niets komen:"
 ./controleer.sh
