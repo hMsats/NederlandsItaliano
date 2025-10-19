@@ -41,9 +41,13 @@ if (item_bekijk>aantal_items_bekijk-1)
 
 }
 
+// 14745 laatste voorbeeld dus 14746 voor een nieuw voorbeeld
+// Moet hieronder goedstaan en dan dus ook worden verhoogd:
 function bepaal_positie()
 {
-  for (n=0;n<max_aantal_items_bekijk;n++)
+  hoogste_nummer=14745;
+
+  for (n=0;n<1+hoogste_nummer;n++)
     positie[n]=0.5;
 
   for (n=0;n<max_aantal_items_bekijk;n++)
@@ -53,7 +57,6 @@ function bepaal_positie()
 gebruiker_string='';
 initialisatie();
 
-// 14745 laatste voorbeeld dus 14746 voor een nieuw voorbeeld
 </script>
 
 </body>
