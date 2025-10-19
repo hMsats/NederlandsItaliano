@@ -3,7 +3,7 @@ Nederlands - Italiano voor zelfstudie!
 
 In een browser op een mobiel in landschapstand:
 
-SatoshiBets.nl/ni
+marcelenanita.nl/ni
 
 Sla (voor alle zekerheid) even iets op via "Sla op", zodat cookies worden aangemaakt. 
 
